@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Politique de confidentialité – AT-Taqwa</title>
+  <meta name="description" content="Politique de confidentialité de l'application AT-Taqwa. Nous ne collectons ni ne partageons vos données personnelles." />
+  <link rel="canonical" href="https://at-taqwa.app/confidentialite.html" />
+
+  <meta property="og:title" content="Politique de confidentialité – AT-Taqwa" />
+  <meta property="og:description" content="AT-Taqwa ne collecte, ne stocke ni ne partage aucune donnée personnelle." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://at-taqwa.app/confidentialite.html" />
+  <meta property="og:image" content="https://at-taqwa.app/og-image.png" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Politique de confidentialité – AT-Taqwa" />
+  <meta name="twitter:description" content="AT-Taqwa ne collecte, ne stocke ni ne partage aucune donnée personnelle." />
+
+  <meta name="theme-color" content="#0ea5e9" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#38bdf8" />
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #0f172a;   /* slate-900 */
+      --muted: #475569;/* slate-600 */
+      --card: #f8fafc; /* slate-50 */
+      --accent: #0ea5e9;/* sky-500 */
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b1220;
+        --fg: #e5e7eb;
+        --muted: #94a3b8;
+        --card: #0f172a;
+        --accent: #38bdf8;
+      }
+    }
+    *{box-sizing:border-box}
+    body {
+      margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      background: var(--bg); color: var(--fg); line-height: 1.6;
+    }
+    .container {
+      max-width: 860px; margin: 0 auto; padding: 32px 20px;
+    }
+    .card {
+      background: var(--card); border: 1px solid rgba(148,163,184,.25);
+      border-radius: 16px; padding: 28px;
+    }
+    h1 { font-size: clamp(1.7rem, 2.5vw, 2.2rem); margin: 0 0 10px }
+    h2 { font-size: clamp(1.2rem, 2vw, 1.4rem); margin-top: 28px }
+    p, li { color: var(--fg) }
+    .muted { color: var(--muted); font-size: .95rem }
+    a { color: var(--accent); text-decoration: none }
+    a:hover { text-decoration: underline }
+    footer { margin-top: 22px; font-size: .9rem; color: var(--muted) }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="card">
+      <header>
+        <h1>Politique de confidentialité – AT-Taqwa</h1>
+        <p class="muted">Dernière mise à jour&nbsp;: 2 novembre 2025</p>
+      </header>
+
+      <p>AT-Taqwa est une application mobile religieuse et éducative. Nous respectons votre vie privée&nbsp;: l'app ne collecte, ne stocke ni ne partage aucune donnée personnelle sans consentement explicite.</p>
+
+      <h2>1. Données collectées</h2>
+      <p>Aucune donnée personnelle identifiable n'est collectée par l'application. Aucune inscription, géolocalisation, photo, contact ou identifiant publicitaire n'est requis.</p>
+
+      <h2>2. Utilisation des informations</h2>
+      <p>Comme nous ne collectons pas de données personnelles, aucune analyse, profilage ou transmission à des tiers n'est effectuée.</p>
+
+      <h2>3. Autorisations techniques</h2>
+      <p>Des autorisations minimales peuvent être sollicitées (ex.&nbsp;: accès Internet pour charger du contenu, stockage pour fichiers audio). Elles ne servent pas à collecter des informations personnelles.</p>
+
+      <h2>4. Liens externes</h2>
+      <p>L'app peut contenir des liens vers des sites tiers. Nous ne sommes pas responsables de leur contenu ni de leurs politiques de confidentialité.</p>
+
+      <h2>5. Contact</h2>
+      <p>Pour toute question&nbsp;: <a href="mailto:papalybnly@gmail.com">papalybnly@gmail.com</a></p>
+
+      <h2>6. Modifications</h2>
+      <p>Cette politique pourra être mise à jour si les fonctionnalités évoluent. Nous indiquerons la date de dernière mise à jour ci-dessus.</p>
+
+      <footer>
+        <p>© <span id="year"></span> AT-Taqwa. Tous droits réservés.</p>
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    (function() {
+      var yearEl = document.getElementById('year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
+</body>
+</html>
+

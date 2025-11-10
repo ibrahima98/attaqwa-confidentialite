@@ -3,89 +3,720 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Politique de confidentialité – AT-Taqwa</title>
-  <meta name="description" content="Politique de confidentialité de l'application AT-Taqwa. Nous ne collectons ni ne partageons vos données personnelles." />
-  <link rel="canonical" href="https://tonpseudo.github.io/attaqwa-confidentialite/" />
+  <title>AT-Taqwa – Guide complet pour la réparation de la prière | 12 chapitres par Aly Anta Sow</title>
+  <meta name="description" content="AT-Taqwa : livre et application mobile avec 12 chapitres structurés en 3 parties. Apprenez la réparation de la prière avec des explications claires, des preuves textuelles du Coran et de la Sunna. Par Aly Anta Sow." />
+  <link rel="canonical" href="https://at-taqwa.app/" />
 
-  <meta property="og:title" content="Politique de confidentialité – AT-Taqwa" />
-  <meta property="og:description" content="AT-Taqwa ne collecte, ne stocke ni ne partage aucune donnée personnelle." />
+  <meta property="og:title" content="AT-Taqwa – Guide complet pour la réparation de la prière | 12 chapitres" />
+  <meta property="og:description" content="Livre et application mobile avec 12 chapitres en 3 parties. Apprenez la réparation de la prière avec des explications claires et des preuves textuelles. Par Aly Anta Sow." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://tonpseudo.github.io/attaqwa-confidentialite/" />
+  <meta property="og:url" content="https://at-taqwa.app/" />
+  <meta property="og:image" content="https://at-taqwa.app/assets/images/logo.png" />
 
-  <style>
-    :root {
-      --bg: #ffffff;
-      --fg: #0f172a;   /* slate-900 */
-      --muted: #475569;/* slate-600 */
-      --card: #f8fafc; /* slate-50 */
-      --accent: #0ea5e9;/* sky-500 */
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0b1220;
-        --fg: #e5e7eb;
-        --muted: #94a3b8;
-        --card: #0f172a;
-        --accent: #38bdf8;
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AT-Taqwa – Guide complet pour la réparation de la prière | 12 chapitres" />
+  <meta name="twitter:description" content="Livre et application mobile avec 12 chapitres en 3 parties. Apprenez la réparation de la prière avec des explications claires et des preuves textuelles." />
+
+  <meta name="theme-color" content="#0f4f49" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f4f49" />
+
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/images/logo.png" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#0f4f49',
+            'accent': '#c6a05a',
+          }
+        }
       }
     }
-    *{box-sizing:border-box}
-    body {
-      margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-      background: var(--bg); color: var(--fg); line-height: 1.6;
+  </script>
+  <style>
+    @supports (backdrop-filter: blur(10px)) {
+      .backdrop-blur {
+        backdrop-filter: blur(10px);
+      }
     }
-    .container {
-      max-width: 860px; margin: 0 auto; padding: 32px 20px;
+    details summary::-webkit-details-marker {
+      display: none;
     }
-    .card {
-      background: var(--card); border: 1px solid rgba(148,163,184,.25);
-      border-radius: 16px; padding: 28px;
+    details summary {
+      list-style: none;
     }
-    h1 { font-size: clamp(1.7rem, 2.5vw, 2.2rem); margin: 0 0 10px }
-    h2 { font-size: clamp(1.2rem, 2vw, 1.4rem); margin-top: 28px }
-    p, li { color: var(--fg) }
-    .muted { color: var(--muted); font-size: .95rem }
-    a { color: var(--accent); text-decoration: none }
-    a:hover { text-decoration: underline }
-    footer { margin-top: 22px; font-size: .9rem; color: var(--muted) }
+    details[open] summary span {
+      transform: rotate(180deg);
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fade-in > * {
+      animation: fadeIn 0.6s ease-out forwards;
+    }
+    .animate-fade-in > *:nth-child(1) { animation-delay: 0.1s; }
+    .animate-fade-in > *:nth-child(2) { animation-delay: 0.2s; }
+    .animate-fade-in > *:nth-child(3) { animation-delay: 0.3s; }
+    /* Scrollbar personnalisée */
+    .scrollbar-thin::-webkit-scrollbar {
+      width: 6px;
+    }
+    .scrollbar-thin::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+    }
+    .scrollbar-thin::-webkit-scrollbar-thumb {
+      background: rgba(198, 160, 90, 0.5);
+      border-radius: 10px;
+    }
+    .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+      background: rgba(198, 160, 90, 0.7);
+    }
+    /* Animation scroll horizontal */
+    @keyframes scroll-horizontal {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+    .animate-scroll {
+      display: flex;
+      width: fit-content;
+    }
+    .animate-scroll:hover {
+      animation-play-state: paused;
+    }
   </style>
 </head>
-<body>
-  <main class="container">
-    <div class="card">
-      <header>
-        <h1>Politique de confidentialité – AT-Taqwa</h1>
-        <p class="muted">Dernière mise à jour&nbsp;: 2 novembre 2025</p>
-      </header>
-
-      <p>AT-Taqwa est une application mobile religieuse et éducative. Nous respectons votre vie privée&nbsp;: l’app ne collecte, ne stocke ni ne partage aucune donnée personnelle sans consentement explicite.</p>
-
-      <h2>1. Données collectées</h2>
-      <p>Aucune donnée personnelle identifiable n’est collectée par l’application. Aucune inscription, géolocalisation, photo, contact ou identifiant publicitaire n’est requis.</p>
-
-      <h2>2. Utilisation des informations</h2>
-      <p>Comme nous ne collectons pas de données personnelles, aucune analyse, profilage ou transmission à des tiers n’est effectuée.</p>
-
-      <h2>3. Autorisations techniques</h2>
-      <p>Des autorisations minimales peuvent être sollicitées (ex.&nbsp;: accès Internet pour charger du contenu, stockage pour fichiers audio). Elles ne servent pas à collecter des informations personnelles.</p>
-
-      <h2>4. Liens externes</h2>
-      <p>L’app peut contenir des liens vers des sites tiers. Nous ne sommes pas responsables de leur contenu ni de leurs politiques de confidentialité.</p>
-
-      <h2>5. Contact</h2>
-      <p>Pour toute question&nbsp;: <a href="mailto:papalybnly@gmail.com">ibrahima.ly@example.com</a></p>
-
-      <h2>6. Modifications</h2>
-      <p>Cette politique pourra être mise à jour si les fonctionnalités évoluent. Nous indiquerons la date de dernière mise à jour ci-dessus.</p>
-
-      <footer>
-        <p>© <span id="year"></span> AT-Taqwa. Tous droits réservés.</p>
-      </footer>
+<body class="min-h-screen bg-[#0f4f49] text-white selection:bg-[#c6a05a]/30 selection:text-white">
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-[#0f4f49]/75">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <div class="flex items-center gap-3">
+          <img src="assets/images/logo.png" alt="AT-Taqwa Logo" class="h-10 w-10 rounded-xl object-contain" />
+          <span class="font-semibold tracking-wider">AT‑TAQWA</span>
+        </div>
+        <nav class="hidden md:flex items-center gap-8 text-sm text-white/80">
+          <a href="#book" class="hover:text-white transition">Le livre</a>
+          <a href="#app" class="hover:text-white transition">App mobile</a>
+          <a href="#features" class="hover:text-white transition">Fonctionnalités</a>
+          <a href="#faq" class="hover:text-white transition">FAQ</a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <a href="#buy" class="inline-flex items-center rounded-xl bg-[#c6a05a] px-4 py-2 text-[#0f4f49] font-semibold shadow hover:brightness-95 transition">Acheter</a>
+        </div>
+      </div>
     </div>
-  </main>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(198,160,90,0.15),transparent_55%)]"></div>
+    <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-4 py-16 sm:px-6 md:grid-cols-2 lg:py-24">
+      <div class="space-y-6">
+        <h1 class="text-4xl font-extrabold leading-tight sm:text-5xl">
+          Votre guide complet pour <span class="text-[#c6a05a]">la réparation de la prière</span>
+        </h1>
+        <p class="max-w-xl text-white/80">
+          AT‑Taqwa est un livre et une application mobile qui vous accompagne dans l'apprentissage et la réparation de la prière. Découvrez 12 chapitres structurés en 3 parties, avec des explications claires, des preuves textuelles et un suivi de votre progression.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#buy" class="rounded-2xl bg-[#c6a05a] px-5 py-3 font-semibold text-[#0f4f49] shadow hover:brightness-95 transition">Acheter le livre</a>
+          <a href="#preview" class="rounded-2xl border border-white/20 px-5 py-3 font-semibold hover:bg-white/10 transition">Lire un extrait (PDF)</a>
+        </div>
+        <div class="flex items-center gap-6 pt-3 text-xs text-white/70">
+          <div class="flex items-center gap-2"><span class="inline-block h-2 w-2 rounded-full bg-[#c6a05a]"></span>Contenu validé par des enseignants</div>
+          <div class="flex items-center gap-2"><span class="inline-block h-2 w-2 rounded-full bg-[#c6a05a]"></span>Disponible en FR & AR</div>
+        </div>
+      </div>
+
+      <!-- Right: mockups -->
+      <div class="relative mx-auto w-full max-w-md">
+        <div class="absolute -left-8 -top-8 h-48 w-48 rounded-full bg-[#c6a05a]/20 blur-3xl"></div>
+        <div class="grid place-items-center gap-6">
+          <!-- Image d'accueil avec dôme -->
+          <div class="w-full rounded-3xl overflow-hidden shadow-lg ring-1 ring-white/10">
+            <img src="assets/images/dome-mosquee.png" alt="Dôme de mosquée" class="w-full h-auto object-cover" />
+          </div>
+          <!-- Book card -->
+          <div class="w-full rounded-3xl bg-white/5 p-4 shadow-lg ring-1 ring-white/10">
+            <div class="flex items-center gap-4">
+              <img src="assets/images/logo.png" alt="Livre AT-Taqwa" class="aspect-[3/4] w-24 shrink-0 rounded-xl object-cover border border-white/10" />
+              <div>
+                <h3 class="text-lg font-semibold">AT‑TAQWA — Le Livre</h3>
+                <p class="text-sm text-white/75">Édition reliée & numérique (PDF)</p>
+                <div class="mt-3 flex gap-3">
+                  <a href="#buy" class="rounded-xl bg-[#c6a05a] px-3 py-2 text-sm font-semibold text-[#0f4f49] hover:brightness-95 transition">Acheter</a>
+                  <a href="#preview" class="rounded-xl border border-white/20 px-3 py-2 text-sm hover:bg-white/10 transition">Extrait</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Image famille -->
+          <div class="w-full rounded-3xl overflow-hidden shadow-lg ring-1 ring-white/10">
+            <img src="assets/images/famille.png" alt="Famille musulmane" class="w-full h-auto object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST / BADGES -->
+  <section class="border-y border-white/10 bg-[#0f4f49]/60">
+    <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 gap-6 sm:grid-cols-4">
+        <div class="rounded-2xl border border-white/10 p-4 text-center text-sm text-white/80">Rappels intelligents</div>
+        <div class="rounded-2xl border border-white/10 p-4 text-center text-sm text-white/80">Suivi des rattrapages</div>
+        <div class="rounded-2xl border border-white/10 p-4 text-center text-sm text-white/80">Conseils authentiques</div>
+        <div class="rounded-2xl border border-white/10 p-4 text-center text-sm text-white/80">Mode hors‑ligne</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOK SECTION -->
+  <section id="book" class="relative">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="grid items-center gap-12 md:grid-cols-2">
+        <div class="order-2 md:order-1">
+          <h2 class="text-3xl font-bold sm:text-4xl">Le livre AT‑Taqwa</h2>
+          <p class="mt-4 text-white/80">
+            Un ouvrage complet structuré en <strong class="text-white">3 parties</strong> et <strong class="text-white">12 chapitres</strong>, rédigé par <strong class="text-[#c6a05a]">Aly Anta Sow</strong>. Une pédagogie claire avec des preuves textuelles du Coran et de la Sunna pour comprendre et réparer correctement vos prières.
+          </p>
+          
+          <!-- Structure du livre avec scroll vertical animé -->
+          <div class="mt-6 max-h-[600px] overflow-y-auto scroll-smooth scrollbar-thin scrollbar-thumb-[#c6a05a]/50 scrollbar-track-white/10 pr-2" id="bookPartsScroll">
+            <div class="space-y-4 animate-fade-in">
+              <div class="rounded-xl border border-white/10 bg-white/5 p-5 transform transition-all duration-500 hover:scale-[1.02] hover:shadow-lg" data-part="1">
+                <div class="flex items-start justify-between mb-3">
+                  <h3 class="font-semibold text-[#c6a05a] text-lg">📖 Partie 1 : La prescription de la prière</h3>
+                  <span class="text-xs bg-white/10 px-2 py-1 rounded-full text-white/70">3 chapitres</span>
+                </div>
+                <p class="text-sm text-white/75 mb-3">Chapitres fondamentaux</p>
+                <ul class="text-sm text-white/70 space-y-2 ml-2">
+                  <li class="flex items-start gap-2">
+                    <span class="text-[#c6a05a] mt-1">•</span>
+                    <span>Chapitre I : Signification, Sources et vertus de la prière</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-[#c6a05a] mt-1">•</span>
+                    <span>Chapitre II : La purification, condition préalable de validité</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-[#c6a05a] mt-1">•</span>
+                    <span>Chapitre III : Les conditions complémentaires de validité</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="rounded-xl border border-[#c6a05a]/30 bg-[#c6a05a]/10 p-5 transform transition-all duration-500 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#c6a05a]/20" data-part="2">
+                <div class="flex items-start justify-between mb-3">
+                  <h3 class="font-semibold text-[#c6a05a] text-lg">✨ Partie 2 : Réparation des erreurs dans la prière individuelle</h3>
+                  <span class="text-xs bg-[#c6a05a]/20 px-2 py-1 rounded-full text-[#c6a05a] font-semibold">Premium</span>
+                </div>
+                <p class="text-sm text-white/75 mb-3">4 chapitres pratiques • Contenu premium</p>
+                <ul class="text-sm text-white/70 space-y-2 ml-2">
+                  <li class="flex items-start gap-2">
+                    <span class="text-[#c6a05a] mt-1">•</span>
+                    <span>Chapitre I : Comment prier ?</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-[#c6a05a] mt-1">•</span>
+                    <span>Chapitre II : Les Sunnas et leurs réparations</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-[#c6a05a] mt-1">•</span>
+                    <span>Chapitre III : Les obligations divines et leurs réparations</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-[#c6a05a] mt-1">•</span>
+                    <span>Chapitre IV : La prière surérogatoire et ses réparations</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="rounded-xl border border-[#c6a05a]/30 bg-[#c6a05a]/10 p-5 transform transition-all duration-500 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#c6a05a]/20" data-part="3">
+                <div class="flex items-start justify-between mb-3">
+                  <h3 class="font-semibold text-[#c6a05a] text-lg">🕌 Partie 3 : Réparation des erreurs dans la prière derrière l'Imam</h3>
+                  <span class="text-xs bg-[#c6a05a]/20 px-2 py-1 rounded-full text-[#c6a05a] font-semibold">Premium</span>
+                </div>
+                <p class="text-sm text-white/75 mb-3">5 chapitres avancés • Contenu premium</p>
+                <ul class="text-sm text-white/70 space-y-2 ml-2">
+                  <li class="flex items-start gap-2">
+                    <span class="text-[#c6a05a] mt-1">•</span>
+                    <span>Chapitre I : La prière en commun</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-[#c6a05a] mt-1">•</span>
+                    <span>Chapitre II : Erreurs commises par le fidèle</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-[#c6a05a] mt-1">•</span>
+                    <span>Chapitre III : Erreurs commises par l'Imam</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-[#c6a05a] mt-1">•</span>
+                    <span>Chapitre IV : La prière du vendredi</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-[#c6a05a] mt-1">•</span>
+                    <span>Chapitre V : La prière du voyage (çalât as-safar)</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <ul class="mt-6 space-y-3 text-white/85">
+            <li class="flex items-start gap-3"><span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#c6a05a]"></span> <strong>12 chapitres</strong> avec explications détaillées et preuves textuelles</li>
+            <li class="flex items-start gap-3"><span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#c6a05a]"></span> <strong>3 parties</strong> progressives : de la base à l'avancé</li>
+            <li class="flex items-start gap-3"><span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#c6a05a]"></span> <strong>Quiz interactifs</strong> pour tester vos connaissances</li>
+            <li class="flex items-start gap-3"><span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#c6a05a]"></span> <strong>QR codes</strong> vers des explications audio</li>
+          </ul>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#buy" class="rounded-2xl bg-[#c6a05a] px-5 py-3 font-semibold text-[#0f4f49] hover:brightness-95 transition">Commander maintenant</a>
+            <a href="#preview" class="rounded-2xl border border-white/20 px-5 py-3 font-semibold hover:bg-white/10 transition">Télécharger l'aperçu</a>
+          </div>
+        </div>
+        <div class="order-1 md:order-2">
+          <div class="mx-auto w-full max-w-sm rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl ring-1 ring-white/10">
+            <img src="assets/images/logo.png" alt="Couverture du livre AT-Taqwa" class="aspect-[3/4] w-full rounded-2xl object-cover shadow-lg" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APP SECTION -->
+  <section id="app" class="border-y border-white/10 bg-[#0d4640] relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-[#c6a05a]/5 via-transparent to-transparent pointer-events-none"></div>
+    <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 relative">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-2 rounded-full bg-[#c6a05a]/15 px-4 py-2 text-sm font-semibold text-[#c6a05a] ring-1 ring-[#c6a05a]/30 mb-6">
+          <span>📱</span> Application Mobile
+        </div>
+        <h2 class="text-4xl font-extrabold sm:text-5xl mb-6 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
+          Suivez vos prières sur votre téléphone
+        </h2>
+        <p class="max-w-3xl mx-auto text-lg text-white/90 leading-relaxed">
+          L'application AT‑Taqwa transforme votre smartphone en guide complet. Accédez à tous les chapitres, suivez votre progression, testez vos connaissances et recevez des rappels personnalisés.
+        </p>
+      </div>
+
+      <!-- Main Screenshots Showcase -->
+      <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <!-- Left: Featured Screenshot -->
+        <div class="relative">
+          <div class="sticky top-24">
+            <div class="relative group">
+              <div class="absolute -inset-4 bg-gradient-to-r from-[#c6a05a]/20 to-transparent rounded-[2.5rem] blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
+              <div class="relative aspect-[9/19] rounded-[2.5rem] border-4 border-white/30 bg-white overflow-hidden shadow-2xl transform transition-all duration-500 group-hover:scale-[1.02]">
+                <img src="assets/images/screenshots/iphone_6.7in_portrait_03_1284x2778.jpg" alt="Quiz interactifs AT-Taqwa" class="w-full h-full object-cover" />
+              </div>
+              <div class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-white/10 backdrop-blur-sm rounded-2xl px-6 py-3 border border-white/20">
+                <p class="text-white font-semibold text-sm">Quiz interactifs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Features with Screenshots -->
+        <div class="space-y-8">
+          <div class="flex gap-6 items-start group">
+            <div class="flex-shrink-0 w-32 aspect-[9/19] rounded-2xl border-2 border-white/20 bg-white overflow-hidden shadow-lg transform transition-all duration-300 group-hover:scale-105 group-hover:border-[#c6a05a]/50">
+              <img src="assets/images/screenshots/iphone_6.7in_portrait_01_1284x2778.jpg" alt="Écran d'accueil" class="w-full h-full object-cover" />
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl font-bold text-white mb-2">📚 Lecture de chapitres</h3>
+              <p class="text-white/80 mb-3">Accédez aux 12 chapitres complets avec reprise automatique à votre dernière section lue. Suivez votre progression en temps réel.</p>
+              <ul class="text-sm text-white/70 space-y-1">
+                <li>✓ Reprise automatique</li>
+                <li>✓ Barre de progression par chapitre</li>
+                <li>✓ Favoris par section</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="flex gap-6 items-start group">
+            <div class="flex-shrink-0 w-32 aspect-[9/19] rounded-2xl border-2 border-white/20 bg-white overflow-hidden shadow-lg transform transition-all duration-300 group-hover:scale-105 group-hover:border-[#c6a05a]/50">
+              <img src="assets/images/screenshots/iphone_6.7in_portrait_02_1284x2778.jpg" alt="Contenu premium" class="w-full h-full object-cover" />
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl font-bold text-white mb-2">✨ Contenu premium</h3>
+              <p class="text-white/80 mb-3">Débloquez les parties 2 et 3 avec 9 chapitres avancés sur la réparation des erreurs dans la prière individuelle et en commun.</p>
+              <ul class="text-sm text-white/70 space-y-1">
+                <li>✓ 9 chapitres premium</li>
+                <li>✓ Paiement sécurisé</li>
+                <li>✓ Accès immédiat</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="flex gap-6 items-start group">
+            <div class="flex-shrink-0 w-32 aspect-[9/19] rounded-2xl border-2 border-white/20 bg-white overflow-hidden shadow-lg transform transition-all duration-300 group-hover:scale-105 group-hover:border-[#c6a05a]/50">
+              <img src="assets/images/screenshots/iphone_6.7in_portrait_02_1284x2778.jpg" alt="Quiz" class="w-full h-full object-cover" />
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl font-bold text-white mb-2">🎯 Quiz interactifs</h3>
+              <p class="text-white/80 mb-3">Testez vos connaissances avec des quiz par chapitre. Sauvegardez vos scores et reprenez où vous vous êtes arrêté.</p>
+              <ul class="text-sm text-white/70 space-y-1">
+                <li>✓ Quiz par chapitre</li>
+                <li>✓ Meilleur score sauvegardé</li>
+                <li>✓ Reprise de session</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Screenshots Gallery - Carousel -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-bold text-center mb-8 text-white">Découvrez toutes les fonctionnalités</h3>
+        <div class="relative overflow-hidden">
+          <div class="flex gap-6 animate-scroll" style="animation: scroll-horizontal 9s linear infinite;">
+            <!-- Dupliquer les images pour un scroll infini -->
+            <div class="flex gap-6 shrink-0">
+              <div class="relative group shrink-0 w-48">
+                <div class="aspect-[9/19] rounded-2xl border-2 border-white/20 bg-white overflow-hidden shadow-xl transform transition-all duration-300 group-hover:scale-110 group-hover:border-[#c6a05a]/50 group-hover:shadow-2xl group-hover:shadow-[#c6a05a]/30">
+                  <img src="assets/images/screenshots/iphone_6.7in_portrait_03_1284x2778.jpg" alt="Quiz" class="w-full h-full object-cover" />
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity">
+                  <p class="text-white text-xs font-medium text-center">Quiz</p>
+                </div>
+              </div>
+              <div class="relative group shrink-0 w-48">
+                <div class="aspect-[9/19] rounded-2xl border-2 border-white/20 bg-white overflow-hidden shadow-xl transform transition-all duration-300 group-hover:scale-110 group-hover:border-[#c6a05a]/50 group-hover:shadow-2xl group-hover:shadow-[#c6a05a]/30">
+                  <img src="assets/images/screenshots/iphone_6.7in_portrait_01_1284x2778.jpg" alt="Accueil" class="w-full h-full object-cover" />
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity">
+                  <p class="text-white text-xs font-medium text-center">Accueil</p>
+                </div>
+              </div>
+              <div class="relative group shrink-0 w-48">
+                <div class="aspect-[9/19] rounded-2xl border-2 border-white/20 bg-white overflow-hidden shadow-xl transform transition-all duration-300 group-hover:scale-110 group-hover:border-[#c6a05a]/50 group-hover:shadow-2xl group-hover:shadow-[#c6a05a]/30">
+                  <img src="assets/images/screenshots/iphone_6.7in_portrait_03_1284x2778.jpg" alt="Parties" class="w-full h-full object-cover" />
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity">
+                  <p class="text-white text-xs font-medium text-center">Parties</p>
+                </div>
+              </div>
+              <div class="relative group shrink-0 w-48">
+                <div class="aspect-[9/19] rounded-2xl border-2 border-white/20 bg-white overflow-hidden shadow-xl transform transition-all duration-300 group-hover:scale-110 group-hover:border-[#c6a05a]/50 group-hover:shadow-2xl group-hover:shadow-[#c6a05a]/30">
+                  <img src="assets/images/screenshots/iphone_6.7in_portrait_04_1284x2778.jpg" alt="Contenu chapitre" class="w-full h-full object-cover" />
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity">
+                  <p class="text-white text-xs font-medium text-center">Contenu</p>
+                </div>
+              </div>
+              <div class="relative group shrink-0 w-48">
+                <div class="aspect-[9/19] rounded-2xl border-2 border-white/20 bg-white overflow-hidden shadow-xl transform transition-all duration-300 group-hover:scale-110 group-hover:border-[#c6a05a]/50 group-hover:shadow-2xl group-hover:shadow-[#c6a05a]/30">
+                  <img src="assets/images/screenshots/iphone_6.7in_portrait_05_1284x2778.jpg" alt="Horaires" class="w-full h-full object-cover" />
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity">
+                  <p class="text-white text-xs font-medium text-center">Horaires</p>
+                </div>
+              </div>
+            </div>
+            <!-- Dupliquer pour l'effet infini -->
+            <div class="flex gap-6 shrink-0">
+              <div class="relative group shrink-0 w-48">
+                <div class="aspect-[9/19] rounded-2xl border-2 border-white/20 bg-white overflow-hidden shadow-xl transform transition-all duration-300 group-hover:scale-110 group-hover:border-[#c6a05a]/50 group-hover:shadow-2xl group-hover:shadow-[#c6a05a]/30">
+                  <img src="assets/images/screenshots/iphone_6.7in_portrait_03_1284x2778.jpg" alt="Quiz" class="w-full h-full object-cover" />
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity">
+                  <p class="text-white text-xs font-medium text-center">Quiz</p>
+                </div>
+              </div>
+              <div class="relative group shrink-0 w-48">
+                <div class="aspect-[9/19] rounded-2xl border-2 border-white/20 bg-white overflow-hidden shadow-xl transform transition-all duration-300 group-hover:scale-110 group-hover:border-[#c6a05a]/50 group-hover:shadow-2xl group-hover:shadow-[#c6a05a]/30">
+                  <img src="assets/images/screenshots/iphone_6.7in_portrait_01_1284x2778.jpg" alt="Accueil" class="w-full h-full object-cover" />
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity">
+                  <p class="text-white text-xs font-medium text-center">Accueil</p>
+                </div>
+              </div>
+              <div class="relative group shrink-0 w-48">
+                <div class="aspect-[9/19] rounded-2xl border-2 border-white/20 bg-white overflow-hidden shadow-xl transform transition-all duration-300 group-hover:scale-110 group-hover:border-[#c6a05a]/50 group-hover:shadow-2xl group-hover:shadow-[#c6a05a]/30">
+                  <img src="assets/images/screenshots/iphone_6.7in_portrait_03_1284x2778.jpg" alt="Parties" class="w-full h-full object-cover" />
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity">
+                  <p class="text-white text-xs font-medium text-center">Parties</p>
+                </div>
+              </div>
+              <div class="relative group shrink-0 w-48">
+                <div class="aspect-[9/19] rounded-2xl border-2 border-white/20 bg-white overflow-hidden shadow-xl transform transition-all duration-300 group-hover:scale-110 group-hover:border-[#c6a05a]/50 group-hover:shadow-2xl group-hover:shadow-[#c6a05a]/30">
+                  <img src="assets/images/screenshots/iphone_6.7in_portrait_04_1284x2778.jpg" alt="Contenu chapitre" class="w-full h-full object-cover" />
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity">
+                  <p class="text-white text-xs font-medium text-center">Contenu</p>
+                </div>
+              </div>
+              <div class="relative group shrink-0 w-48">
+                <div class="aspect-[9/19] rounded-2xl border-2 border-white/20 bg-white overflow-hidden shadow-xl transform transition-all duration-300 group-hover:scale-110 group-hover:border-[#c6a05a]/50 group-hover:shadow-2xl group-hover:shadow-[#c6a05a]/30">
+                  <img src="assets/images/screenshots/iphone_6.7in_portrait_05_1284x2778.jpg" alt="Horaires" class="w-full h-full object-cover" />
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity">
+                  <p class="text-white text-xs font-medium text-center">Horaires</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Features List -->
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div>
+          <h3 class="text-xl font-semibold mb-4 text-[#c6a05a]">Fonctionnalités principales</h3>
+          <ul class="space-y-3 text-white/85">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#c6a05a]"></span>
+              <div>
+                <strong class="text-white">12 chapitres complets</strong>
+                <p class="text-sm text-white/70">3 parties progressives avec reprise automatique</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#c6a05a]"></span>
+              <div>
+                <strong class="text-white">Quiz par chapitre</strong>
+                <p class="text-sm text-white/70">Testez vos connaissances avec reprise de session</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#c6a05a]"></span>
+              <div>
+                <strong class="text-white">Horaires de prière</strong>
+                <p class="text-sm text-white/70">Calcul automatique selon votre localisation</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#c6a05a]"></span>
+              <div>
+                <strong class="text-white">Tasbih électronique</strong>
+                <p class="text-sm text-white/70">Compteur de dhikr intégré</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4 text-[#c6a05a]">Avantages</h3>
+          <ul class="space-y-3 text-white/85">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#c6a05a]"></span>
+              <div>
+                <strong class="text-white">Mode hors-ligne</strong>
+                <p class="text-sm text-white/70">Accédez au contenu sans connexion internet</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#c6a05a]"></span>
+              <div>
+                <strong class="text-white">Suivi de progression</strong>
+                <p class="text-sm text-white/70">Visualisez votre avancement par chapitre</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#c6a05a]"></span>
+              <div>
+                <strong class="text-white">Notifications intelligentes</strong>
+                <p class="text-sm text-white/70">Rappels personnalisés pour vos prières</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#c6a05a]"></span>
+              <div>
+                <strong class="text-white">Contenu premium</strong>
+                <p class="text-sm text-white/70">Débloquez les parties 2 et 3 (9 chapitres avancés)</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- App Store Buttons -->
+      <div class="mt-12 flex flex-wrap justify-center gap-4">
+        <a href="#store" class="inline-flex items-center gap-3 rounded-2xl bg-black px-6 py-4 font-semibold text-white hover:bg-gray-900 transition shadow-lg">
+          <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-1.02.65.03 2.47.26 3.64 1.98-3.09 1.73-2.59 5.98.54 7.31-.7 1.95-1.47 3.85-2.5 5.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+          </svg>
+          <div class="text-left">
+            <div class="text-xs">Télécharger sur</div>
+            <div class="text-lg">App Store</div>
+          </div>
+        </a>
+        <a href="#store" class="inline-flex items-center gap-3 rounded-2xl bg-[#c6a05a] px-6 py-4 font-semibold text-[#0f4f49] hover:brightness-95 transition shadow-lg">
+          <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M3,20.5V3.5C3,2.91,3.09,1.5,4,1.5H20C20.91,1.5,21,2.91,21,3.5V20.5C21,21.41,20.91,22.5,20,22.5H4C3.09,22.5,3,21.41,3,20.5M16.75,18.86L12,16.08L7.25,18.86V5.14H16.75V18.86M7.25,4.04L12,6.82L16.75,4.04H7.25Z"/>
+          </svg>
+          <div class="text-left">
+            <div class="text-xs">Disponible sur</div>
+            <div class="text-lg">Google Play</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES GRID -->
+  <section id="features">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold sm:text-4xl">Ce que vous allez obtenir</h2>
+      <p class="mt-4 text-center text-white/70 max-w-2xl mx-auto">Un guide complet et structuré pour comprendre et réparer vos prières avec des explications claires et des preuves authentiques.</p>
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6 shadow ring-1 ring-white/10 hover:bg-white/10 transition">
+          <div class="mb-3 text-3xl">📖</div>
+          <h3 class="text-lg font-semibold">12 chapitres structurés</h3>
+          <p class="mt-2 text-sm text-white/75">3 parties progressives : de la base (prescription) aux cas avancés (prière en commun, voyage).</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6 shadow ring-1 ring-white/10 hover:bg-white/10 transition">
+          <div class="mb-3 text-3xl">📚</div>
+          <h3 class="text-lg font-semibold">Preuves textuelles</h3>
+          <p class="mt-2 text-sm text-white/75">Références au Coran et à la Sunna pour chaque explication, avec citations authentiques.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6 shadow ring-1 ring-white/10 hover:bg-white/10 transition">
+          <div class="mb-3 text-3xl">🎯</div>
+          <h3 class="text-lg font-semibold">Méthodologie claire</h3>
+          <p class="mt-2 text-sm text-white/75">Explications accessibles pour débutants et avancés, avec exemples concrets de réparation.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6 shadow ring-1 ring-white/10 hover:bg-white/10 transition">
+          <div class="mb-3 text-3xl">🔊</div>
+          <h3 class="text-lg font-semibold">QR codes audio</h3>
+          <p class="mt-2 text-sm text-white/75">Accédez à des explications audio directement depuis le livre via QR codes.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6 shadow ring-1 ring-white/10 hover:bg-white/10 transition">
+          <div class="mb-3 text-3xl">✅</div>
+          <h3 class="text-lg font-semibold">Cas pratiques</h3>
+          <p class="mt-2 text-sm text-white/75">Exemples concrets pour chaque type d'erreur et sa réparation selon les règles islamiques.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6 shadow ring-1 ring-white/10 hover:bg-white/10 transition">
+          <div class="mb-3 text-3xl">📱</div>
+          <h3 class="text-lg font-semibold">Application complémentaire</h3>
+          <p class="mt-2 text-sm text-white/75">Quiz interactifs, suivi de progression et horaires de prière dans l'app mobile.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTHOR -->
+  <section class="border-t border-white/10 bg-[#0d4640]">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="grid items-center gap-8 md:grid-cols-3">
+        <div class="md:col-span-2">
+          <h2 class="text-3xl font-bold sm:text-4xl">À propos de l'auteur</h2>
+          <p class="mt-4 text-white/80">
+            <strong class="text-[#c6a05a]">Aly Anta Sow</strong> est passionné de recherches sur l'islam. Il rend les textes islamiques accessibles aux non arabophones. Auteur d'essais sur le Hajj, la Oumra, le Jeûne de Ramadan et la vie du Prophète (paix et salut sur lui).
+          </p>
+          <p class="mt-4 text-white/80">
+            L'ouvrage AT‑Taqwa est rédigé dans un style accessible et rigoureux, avec des références au Coran et à la Sunna. L'objectif : vous accompagner concrètement, avec miséricorde et méthode, pour comprendre et réparer sereinement vos prières.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#contact" class="rounded-2xl border border-white/20 px-5 py-3 font-semibold hover:bg-white/10 transition">Contact</a>
+            <a href="#press" class="rounded-2xl bg-[#c6a05a] px-5 py-3 font-semibold text-[#0f4f49] hover:brightness-95 transition">Dossier de presse (PDF)</a>
+          </div>
+        </div>
+        <div class="mx-auto w-40 aspect-[3/4] rounded-2xl border border-white/10 bg-white/10 overflow-hidden">
+          <img src="assets/images/famille.png" alt="Auteur" class="w-full h-full object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold sm:text-4xl">Questions fréquentes</h2>
+      <div class="mt-8 divide-y divide-white/10 rounded-2xl border border-white/10 bg-white/5">
+        <details class="group open:bg-white/5">
+          <summary class="cursor-pointer list-none p-6 font-medium flex items-center justify-between">
+            <span>Le livre existe‑t‑il en version papier et numérique ?</span>
+            <span class="text-white/50 transition-transform">⌄</span>
+          </summary>
+          <div class="px-6 pb-6 text-white/80">Oui, le livre est disponible en version papier (reliée) et en version numérique (PDF et ePub). Les versions numériques sont incluses avec l'achat de la version papier ou peuvent être achetées séparément.</div>
+        </details>
+        <details class="group open:bg-white/5">
+          <summary class="cursor-pointer list-none p-6 font-medium flex items-center justify-between">
+            <span>Puis‑je utiliser l'app sans créer de compte ?</span>
+            <span class="text-white/50 transition-transform">⌄</span>
+          </summary>
+          <div class="px-6 pb-6 text-white/80">Un mode hors‑ligne est prévu. La création de compte permet de sauvegarder vos données et d'activer les rappels.</div>
+        </details>
+        <details class="group open:bg-white/5">
+          <summary class="cursor-pointer list-none p-6 font-medium flex items-center justify-between">
+            <span>Comment acheter depuis l'étranger ?</span>
+            <span class="text-white/50 transition-transform">⌄</span>
+          </summary>
+          <div class="px-6 pb-6 text-white/80">
+            <p class="mb-2">Paiements en ligne (carte, PayDunya/SoftPay) et livraison internationale disponible. Le livre contient 12 chapitres répartis en 3 parties progressives.</p>
+            <p class="mt-3"><strong class="text-[#c6a05a]">Application mobile :</strong> Les utilisateurs internationaux peuvent télécharger l'application AT-Taqwa directement sur le Google Play Store pour accéder au contenu numérique.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FOOTER -->
+  <section class="relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(198,160,90,0.18),transparent_55%)]"></div>
+    <div class="mx-auto max-w-5xl px-4 py-16 text-center sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold sm:text-4xl">Faites le premier pas dès aujourd'hui</h2>
+      <p class="mx-auto mt-4 max-w-2xl text-white/80">
+        Commandez le livre AT‑Taqwa et activez votre suivi personnalisé dans l'app.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href="#buy" class="rounded-2xl bg-[#c6a05a] px-6 py-3 font-semibold text-[#0f4f49] shadow hover:brightness-95 transition">Acheter maintenant</a>
+        <a href="#preview" class="rounded-2xl border border-white/20 px-6 py-3 font-semibold hover:bg-white/10 transition">Télécharger l'extrait</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-white/10 bg-[#0d4640]">
+    <div class="mx-auto max-w-7xl px-4 py-8 text-center text-sm text-white/60 sm:px-6 lg:px-8">
+      <p>© <span id="year"></span> AT‑TAQWA. Tous droits réservés.</p>
+      <div class="mt-3 flex justify-center gap-6">
+        <a href="confidentialite.html" class="hover:text-white transition">Confidentialité</a>
+        <a href="#terms" class="hover:text-white transition">Conditions</a>
+        <a href="mailto:papalybnly@gmail.com" class="hover:text-white transition">Contact</a>
+      </div>
+    </div>
+  </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    (function() {
+      var yearEl = document.getElementById('year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+      
+      // Smooth scroll pour les ancres
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          var href = this.getAttribute('href');
+          if (href !== '#' && href !== '#buy' && href !== '#preview' && href !== '#store' && href !== '#contact' && href !== '#press' && href !== '#terms') {
+            e.preventDefault();
+            var target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          }
+        });
+      });
+    })();
   </script>
 </body>
 </html>
