@@ -61,6 +61,46 @@
         transform: translateY(0);
       }
     }
+    @keyframes slideDownReveal {
+      0% {
+        opacity: 0;
+        transform: translateY(-40px) scale(0.9);
+        filter: blur(6px);
+      }
+      50% {
+        opacity: 0.6;
+        transform: translateY(8px) scale(0.96);
+        filter: blur(3px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+      }
+    }
+    @keyframes highlightPulse {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(198, 160, 90, 0);
+      }
+      50% {
+        box-shadow: 0 0 20px 5px rgba(198, 160, 90, 0.3);
+      }
+    }
+    .book-part-card {
+      opacity: 0;
+    }
+    .book-part-card:nth-child(1) {
+      animation: slideDownReveal 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s forwards,
+                 highlightPulse 2s ease-in-out 1.5s;
+    }
+    .book-part-card:nth-child(2) {
+      animation: slideDownReveal 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.8s forwards,
+                 highlightPulse 2s ease-in-out 2s;
+    }
+    .book-part-card:nth-child(3) {
+      animation: slideDownReveal 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 1.3s forwards,
+                 highlightPulse 2s ease-in-out 2.5s;
+    }
     .animate-fade-in > * {
       animation: fadeIn 0.6s ease-out forwards;
     }
@@ -196,86 +236,84 @@
             Un ouvrage complet structuré en <strong class="text-white">3 parties</strong> et <strong class="text-white">12 chapitres</strong>, rédigé par <strong class="text-[#c6a05a]">Aly Anta Sow</strong>. Une pédagogie claire avec des preuves textuelles du Coran et de la Sunna pour comprendre et réparer correctement vos prières.
           </p>
           
-          <!-- Structure du livre avec scroll vertical animé -->
-          <div class="mt-6 max-h-[600px] overflow-y-auto scroll-smooth scrollbar-thin scrollbar-thumb-[#c6a05a]/50 scrollbar-track-white/10 pr-2" id="bookPartsScroll">
-            <div class="space-y-4 animate-fade-in">
-              <div class="rounded-xl border border-white/10 bg-white/5 p-5 transform transition-all duration-500 hover:scale-[1.02] hover:shadow-lg" data-part="1">
-                <div class="flex items-start justify-between mb-3">
-                  <h3 class="font-semibold text-[#c6a05a] text-lg">📖 Partie 1 : La prescription de la prière</h3>
-                  <span class="text-xs bg-white/10 px-2 py-1 rounded-full text-white/70">3 chapitres</span>
-                </div>
-                <p class="text-sm text-white/75 mb-3">Chapitres fondamentaux</p>
-                <ul class="text-sm text-white/70 space-y-2 ml-2">
-                  <li class="flex items-start gap-2">
-                    <span class="text-[#c6a05a] mt-1">•</span>
-                    <span>Chapitre I : Signification, Sources et vertus de la prière</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="text-[#c6a05a] mt-1">•</span>
-                    <span>Chapitre II : La purification, condition préalable de validité</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="text-[#c6a05a] mt-1">•</span>
-                    <span>Chapitre III : Les conditions complémentaires de validité</span>
-                  </li>
-                </ul>
+          <!-- Structure du livre avec animation de révélation -->
+          <div class="mt-6 space-y-4" id="bookPartsContainer">
+            <div class="book-part-card rounded-xl border border-white/10 bg-white/5 p-5 transform transition-all duration-700 hover:scale-[1.02] hover:shadow-lg hover:bg-white/10" data-part="1">
+              <div class="flex items-start justify-between mb-3">
+                <h3 class="font-semibold text-[#c6a05a] text-lg">📖 Partie 1 : La prescription de la prière</h3>
+                <span class="text-xs bg-white/10 px-2 py-1 rounded-full text-white/70">3 chapitres</span>
               </div>
-              
-              <div class="rounded-xl border border-[#c6a05a]/30 bg-[#c6a05a]/10 p-5 transform transition-all duration-500 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#c6a05a]/20" data-part="2">
-                <div class="flex items-start justify-between mb-3">
-                  <h3 class="font-semibold text-[#c6a05a] text-lg">✨ Partie 2 : Réparation des erreurs dans la prière individuelle</h3>
-                  <span class="text-xs bg-[#c6a05a]/20 px-2 py-1 rounded-full text-[#c6a05a] font-semibold">Premium</span>
-                </div>
-                <p class="text-sm text-white/75 mb-3">4 chapitres pratiques • Contenu premium</p>
-                <ul class="text-sm text-white/70 space-y-2 ml-2">
-                  <li class="flex items-start gap-2">
-                    <span class="text-[#c6a05a] mt-1">•</span>
-                    <span>Chapitre I : Comment prier ?</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="text-[#c6a05a] mt-1">•</span>
-                    <span>Chapitre II : Les Sunnas et leurs réparations</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="text-[#c6a05a] mt-1">•</span>
-                    <span>Chapitre III : Les obligations divines et leurs réparations</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="text-[#c6a05a] mt-1">•</span>
-                    <span>Chapitre IV : La prière surérogatoire et ses réparations</span>
-                  </li>
-                </ul>
+              <p class="text-sm text-white/75 mb-3">Chapitres fondamentaux</p>
+              <ul class="text-sm text-white/70 space-y-2 ml-2">
+                <li class="flex items-start gap-2">
+                  <span class="text-[#c6a05a] mt-1">•</span>
+                  <span>Chapitre I : Signification, Sources et vertus de la prière</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-[#c6a05a] mt-1">•</span>
+                  <span>Chapitre II : La purification, condition préalable de validité</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-[#c6a05a] mt-1">•</span>
+                  <span>Chapitre III : Les conditions complémentaires de validité</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="book-part-card rounded-xl border border-[#c6a05a]/30 bg-[#c6a05a]/10 p-5 transform transition-all duration-700 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#c6a05a]/20" data-part="2">
+              <div class="flex items-start justify-between mb-3">
+                <h3 class="font-semibold text-[#c6a05a] text-lg">✨ Partie 2 : Réparation des erreurs dans la prière individuelle</h3>
+                <span class="text-xs bg-[#c6a05a]/20 px-2 py-1 rounded-full text-[#c6a05a] font-semibold">Premium</span>
               </div>
-              
-              <div class="rounded-xl border border-[#c6a05a]/30 bg-[#c6a05a]/10 p-5 transform transition-all duration-500 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#c6a05a]/20" data-part="3">
-                <div class="flex items-start justify-between mb-3">
-                  <h3 class="font-semibold text-[#c6a05a] text-lg">🕌 Partie 3 : Réparation des erreurs dans la prière derrière l'Imam</h3>
-                  <span class="text-xs bg-[#c6a05a]/20 px-2 py-1 rounded-full text-[#c6a05a] font-semibold">Premium</span>
-                </div>
-                <p class="text-sm text-white/75 mb-3">5 chapitres avancés • Contenu premium</p>
-                <ul class="text-sm text-white/70 space-y-2 ml-2">
-                  <li class="flex items-start gap-2">
-                    <span class="text-[#c6a05a] mt-1">•</span>
-                    <span>Chapitre I : La prière en commun</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="text-[#c6a05a] mt-1">•</span>
-                    <span>Chapitre II : Erreurs commises par le fidèle</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="text-[#c6a05a] mt-1">•</span>
-                    <span>Chapitre III : Erreurs commises par l'Imam</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="text-[#c6a05a] mt-1">•</span>
-                    <span>Chapitre IV : La prière du vendredi</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="text-[#c6a05a] mt-1">•</span>
-                    <span>Chapitre V : La prière du voyage (çalât as-safar)</span>
-                  </li>
-                </ul>
+              <p class="text-sm text-white/75 mb-3">4 chapitres pratiques • Contenu premium</p>
+              <ul class="text-sm text-white/70 space-y-2 ml-2">
+                <li class="flex items-start gap-2">
+                  <span class="text-[#c6a05a] mt-1">•</span>
+                  <span>Chapitre I : Comment prier ?</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-[#c6a05a] mt-1">•</span>
+                  <span>Chapitre II : Les Sunnas et leurs réparations</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-[#c6a05a] mt-1">•</span>
+                  <span>Chapitre III : Les obligations divines et leurs réparations</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-[#c6a05a] mt-1">•</span>
+                  <span>Chapitre IV : La prière surérogatoire et ses réparations</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="book-part-card rounded-xl border border-[#c6a05a]/30 bg-[#c6a05a]/10 p-5 transform transition-all duration-700 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#c6a05a]/20" data-part="3">
+              <div class="flex items-start justify-between mb-3">
+                <h3 class="font-semibold text-[#c6a05a] text-lg">🕌 Partie 3 : Réparation des erreurs dans la prière derrière l'Imam</h3>
+                <span class="text-xs bg-[#c6a05a]/20 px-2 py-1 rounded-full text-[#c6a05a] font-semibold">Premium</span>
               </div>
+              <p class="text-sm text-white/75 mb-3">5 chapitres avancés • Contenu premium</p>
+              <ul class="text-sm text-white/70 space-y-2 ml-2">
+                <li class="flex items-start gap-2">
+                  <span class="text-[#c6a05a] mt-1">•</span>
+                  <span>Chapitre I : La prière en commun</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-[#c6a05a] mt-1">•</span>
+                  <span>Chapitre II : Erreurs commises par le fidèle</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-[#c6a05a] mt-1">•</span>
+                  <span>Chapitre III : Erreurs commises par l'Imam</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-[#c6a05a] mt-1">•</span>
+                  <span>Chapitre IV : La prière du vendredi</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-[#c6a05a] mt-1">•</span>
+                  <span>Chapitre V : La prière du voyage (çalât as-safar)</span>
+                </li>
+              </ul>
             </div>
           </div>
           
