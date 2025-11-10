@@ -172,7 +172,23 @@
         </nav>
         <div class="flex items-center gap-2">
           <a href="#buy" class="inline-flex items-center rounded-xl bg-[#c6a05a] px-4 py-2 text-[#0f4f49] font-semibold shadow hover:brightness-95 transition">Acheter</a>
+          <!-- Mobile Menu Button -->
+          <button id="mobileMenuButton" class="md:hidden p-2 rounded-lg hover:bg-white/10 transition" aria-label="Menu">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
         </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 bg-[#0f4f49]/95 backdrop-blur-sm">
+        <nav class="px-4 py-4 space-y-3">
+          <a href="#book" class="block py-2 text-white/80 hover:text-white transition">Le livre</a>
+          <a href="#app" class="block py-2 text-white/80 hover:text-white transition">App mobile</a>
+          <a href="#features" class="block py-2 text-white/80 hover:text-white transition">Fonctionnalités</a>
+          <a href="#faq" class="block py-2 text-white/80 hover:text-white transition">FAQ</a>
+          <a href="contact.html" class="block py-2 text-[#c6a05a] font-semibold hover:text-[#c6a05a]/80 transition">Contact</a>
+        </nav>
       </div>
     </div>
   </header>
@@ -770,13 +786,41 @@
         });
       });
     })();
+
+    // Mobile Menu Toggle
+    (function() {
+      const menuButton = document.getElementById('mobileMenuButton');
+      const mobileMenu = document.getElementById('mobileMenu');
+      
+      if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+          // Change icon to X when open
+          const icon = menuButton.querySelector('svg');
+          if (mobileMenu.classList.contains('hidden')) {
+            icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>';
+          } else {
+            icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>';
+          }
+        });
+
+        // Close menu when clicking on a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', function() {
+            mobileMenu.classList.add('hidden');
+            const icon = menuButton.querySelector('svg');
+            icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>';
+          });
+        });
+      }
+    })();
   </script>
 
   <!-- WhatsApp Floating Button -->
   <a href="https://wa.me/221785204078?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20AT-Taqwa" 
      target="_blank" 
      rel="noopener noreferrer"
-     class="fixed bottom-6 right-6 z-50 whatsapp-float group">
+     class="fixed bottom-20 right-6 z-50 whatsapp-float group">
     <div class="relative">
       <div class="absolute inset-0 bg-[#25D366] rounded-full whatsapp-pulse opacity-75"></div>
       <div class="relative w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
