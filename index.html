@@ -843,6 +843,7 @@
       try {
         var params = new URLSearchParams(window.location.search || '');
         var mode = params.get('mode');
+        var oob = params.get('oobCode') || '';
         // On gère aussi un flag générique ?verified=true si tu veux tester manuellement
         var verifiedFlag = params.get('verified');
         if (mode === 'verifyEmail' || verifiedFlag === 'true') {
@@ -861,16 +862,17 @@
           bar.style.flexWrap = 'wrap';
           bar.style.alignItems = 'center';
           bar.style.justifyContent = 'center';
+          var deep = 'attaqwa://verify-email/success' + (oob ? ('?oobCode=' + encodeURIComponent(oob)) : '');
           bar.innerHTML = '' +
             '<div style="color:#fff;margin-right:12px;font-weight:600;">E‑mail vérifié avec succès.</div>' +
-            '<a id="openAppLink" href="attaqwa://verify-email/success" ' +
+            '<a id="openAppLink" href="'+ deep +'" ' +
             'style="background:#c6a05a;color:#0f4f49;font-weight:700;padding:10px 14px;border-radius:12px;text-decoration:none;margin:6px 8px;">' +
             'Ouvrir l’application</a>' +
             '<a href="/" style="color:#fff;border:1px solid rgba(255,255,255,0.25);padding:10px 14px;border-radius:12px;text-decoration:none;margin:6px 8px;">Rester sur le site</a>';
           document.body.appendChild(bar);
           // Tentative d’ouverture automatique de l’app (si scheme enregistré)
           setTimeout(function () {
-            try { window.location.href = 'attaqwa://verify-email/success'; } catch (e) {}
+            try { window.location.href = deep; } catch (e) {}
           }, 1200);
         }
       } catch (e) {
