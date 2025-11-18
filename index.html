@@ -837,5 +837,46 @@
       </div>
     </div>
   </a>
+  <script>
+    // Gestion du retour d'e-mail Firebase: ?mode=verifyEmail&...
+    (function () {
+      try {
+        var params = new URLSearchParams(window.location.search || '');
+        var mode = params.get('mode');
+        // On gère aussi un flag générique ?verified=true si tu veux tester manuellement
+        var verifiedFlag = params.get('verified');
+        if (mode === 'verifyEmail' || verifiedFlag === 'true') {
+          // Afficher un bandeau de confirmation + bouton d'ouverture de l'app
+          var bar = document.createElement('div');
+          bar.style.position = 'fixed';
+          bar.style.left = '0';
+          bar.style.right = '0';
+          bar.style.bottom = '0';
+          bar.style.zIndex = '9999';
+          bar.style.background = 'rgba(15,79,73,0.98)';
+          bar.style.borderTop = '1px solid rgba(255,255,255,0.15)';
+          bar.style.backdropFilter = 'blur(6px)';
+          bar.style.padding = '16px';
+          bar.style.display = 'flex';
+          bar.style.flexWrap = 'wrap';
+          bar.style.alignItems = 'center';
+          bar.style.justifyContent = 'center';
+          bar.innerHTML = '' +
+            '<div style="color:#fff;margin-right:12px;font-weight:600;">E‑mail vérifié avec succès.</div>' +
+            '<a id="openAppLink" href="attaqwa://verify-email/success" ' +
+            'style="background:#c6a05a;color:#0f4f49;font-weight:700;padding:10px 14px;border-radius:12px;text-decoration:none;margin:6px 8px;">' +
+            'Ouvrir l’application</a>' +
+            '<a href="/" style="color:#fff;border:1px solid rgba(255,255,255,0.25);padding:10px 14px;border-radius:12px;text-decoration:none;margin:6px 8px;">Rester sur le site</a>';
+          document.body.appendChild(bar);
+          // Tentative d’ouverture automatique de l’app (si scheme enregistré)
+          setTimeout(function () {
+            try { window.location.href = 'attaqwa://verify-email/success'; } catch (e) {}
+          }, 1200);
+        }
+      } catch (e) {
+        // silencieux
+      }
+    })();
+  </script>
 </body>
 </html>
