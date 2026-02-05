@@ -3,10 +3,21 @@
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "com.attaqwaAly.app",
+      "package_name": "com.attaqwa.app",
       "sha256_cert_fingerprints": [
-        "8DDF35ABBCA4BFBD680DB9621CF3E84993043C36BC2A01C4469A0809B5F6C5FC"
+        "REPLACE_WITH_DEBUG_SHA256"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.attaqwa.app",
+      "sha256_cert_fingerprints": [
+        "CB:9D:30:4E:66:39:7F:13:C1:14:DC:63:0B:13:43:97:E0:88:14:58:DB:48:7F:39:E6:F5:B3:2B:85:AE:0C:74"
       ]
     }
   }
 ]
+
