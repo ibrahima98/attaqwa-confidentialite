@@ -4,102 +4,419 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Politique de confidentialité – AT-Taqwa</title>
-  <meta name="description" content="Politique de confidentialité de l'application AT-Taqwa. Nous ne collectons ni ne partageons vos données personnelles." />
+  <meta name="description" content="Politique de confidentialité de l'application mobile AT-Taqwa. Découvrez comment nous collectons, utilisons et protégeons vos données personnelles." />
   <link rel="canonical" href="https://at-taqwa.app/confidentialite.html" />
 
   <meta property="og:title" content="Politique de confidentialité – AT-Taqwa" />
-  <meta property="og:description" content="AT-Taqwa ne collecte, ne stocke ni ne partage aucune donnée personnelle." />
+  <meta property="og:description" content="Politique de confidentialité de l'application mobile AT-Taqwa." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://at-taqwa.app/confidentialite.html" />
-  <meta property="og:image" content="https://at-taqwa.app/og-image.png" />
+  <meta property="og:image" content="https://at-taqwa.app/assets/images/logo.png" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Politique de confidentialité – AT-Taqwa" />
-  <meta name="twitter:description" content="AT-Taqwa ne collecte, ne stocke ni ne partage aucune donnée personnelle." />
+  <meta name="twitter:description" content="Politique de confidentialité de l'application mobile AT-Taqwa." />
 
-  <meta name="theme-color" content="#0ea5e9" />
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#38bdf8" />
+  <meta name="theme-color" content="#0f4f49" />
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/images/logo.png" />
 
-  <style>
-    :root {
-      --bg: #ffffff;
-      --fg: #0f172a;   /* slate-900 */
-      --muted: #475569;/* slate-600 */
-      --card: #f8fafc; /* slate-50 */
-      --accent: #0ea5e9;/* sky-500 */
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0b1220;
-        --fg: #e5e7eb;
-        --muted: #94a3b8;
-        --card: #0f172a;
-        --accent: #38bdf8;
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#0f4f49',
+            'accent': '#c6a05a',
+          }
+        }
       }
     }
-    *{box-sizing:border-box}
-    body {
-      margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-      background: var(--bg); color: var(--fg); line-height: 1.6;
-    }
-    .container {
-      max-width: 860px; margin: 0 auto; padding: 32px 20px;
-    }
-    .card {
-      background: var(--card); border: 1px solid rgba(148,163,184,.25);
-      border-radius: 16px; padding: 28px;
-    }
-    h1 { font-size: clamp(1.7rem, 2.5vw, 2.2rem); margin: 0 0 10px }
-    h2 { font-size: clamp(1.2rem, 2vw, 1.4rem); margin-top: 28px }
-    p, li { color: var(--fg) }
-    .muted { color: var(--muted); font-size: .95rem }
-    a { color: var(--accent); text-decoration: none }
-    a:hover { text-decoration: underline }
-    footer { margin-top: 22px; font-size: .9rem; color: var(--muted) }
-  </style>
+  </script>
 </head>
-<body>
-  <main class="container">
-    <div class="card">
-      <header>
-        <h1>Politique de confidentialité – AT-Taqwa</h1>
-        <p class="muted">Dernière mise à jour&nbsp;: 2 novembre 2025</p>
+<body class="min-h-screen bg-[#0f4f49] text-white selection:bg-[#c6a05a]/30 selection:text-white">
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-[#0f4f49]/75 border-b border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <div class="flex items-center gap-3">
+          <a href="index.html" class="flex items-center gap-3">
+            <img src="assets/images/logo.png" alt="AT-Taqwa Logo" class="h-10 w-10 rounded-xl object-contain" />
+            <span class="font-semibold tracking-wider">AT‑TAQWA</span>
+          </a>
+        </div>
+        <nav class="hidden md:flex items-center gap-8 text-sm text-white/80">
+          <a href="index.html#book" class="hover:text-white transition">Le livre</a>
+          <a href="index.html#app" class="hover:text-white transition">App mobile</a>
+          <a href="index.html#features" class="hover:text-white transition">Fonctionnalités</a>
+          <a href="index.html#faq" class="hover:text-white transition">FAQ</a>
+          <a href="contact.html" class="hover:text-white transition">Contact</a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <a href="https://apps.apple.com/sn/app/at-taqwa/id6748707044?l=fr-FR" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-xl bg-[#c6a05a] px-4 py-2 text-[#0f4f49] font-semibold shadow hover:brightness-95 transition">Télécharger</a>
+          <!-- Mobile Menu Button -->
+          <button id="mobileMenuButton" class="md:hidden p-2 rounded-lg hover:bg-white/10 transition" aria-label="Menu">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 bg-[#0f4f49]/95 backdrop-blur-sm">
+        <nav class="px-4 py-4 space-y-3">
+          <a href="index.html#book" class="block py-2 text-white/80 hover:text-white transition">Le livre</a>
+          <a href="index.html#app" class="block py-2 text-white/80 hover:text-white transition">App mobile</a>
+          <a href="index.html#features" class="block py-2 text-white/80 hover:text-white transition">Fonctionnalités</a>
+          <a href="index.html#faq" class="block py-2 text-white/80 hover:text-white transition">FAQ</a>
+          <a href="contact.html" class="block py-2 text-[#c6a05a] font-semibold hover:text-[#c6a05a]/80 transition">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
+    <div class="bg-white/5 rounded-3xl border border-white/10 p-8 md:p-12 backdrop-blur-sm">
+      <header class="mb-8">
+        <h1 class="text-4xl font-extrabold mb-4 text-[#c6a05a]">Politique de confidentialité</h1>
+        <p class="text-white/70 text-sm">Dernière mise à jour : <span id="updateDate"></span></p>
       </header>
 
-      <p>AT-Taqwa est une application mobile religieuse et éducative. Nous respectons votre vie privée&nbsp;: l'app ne collecte, ne stocke ni ne partage aucune donnée personnelle sans consentement explicite.</p>
+      <div class="prose prose-invert max-w-none space-y-8">
+        <section>
+          <h2 class="text-2xl font-bold mb-4 text-white">1. Introduction</h2>
+          <p class="text-white/90 leading-relaxed">
+            AT-Taqwa ("nous", "notre", "l'application") est une application mobile éducative basée sur le livre écrit par <strong>Aly Anta Sow</strong>. 
+            Cette politique de confidentialité décrit comment nous collectons, utilisons, stockons et protégeons vos informations personnelles 
+            lorsque vous utilisez notre application mobile disponible sur l'App Store et le Google Play Store.
+          </p>
+          <p class="text-white/90 leading-relaxed mt-4">
+            En utilisant AT-Taqwa, vous acceptez les pratiques décrites dans cette politique. Si vous n'acceptez pas cette politique, 
+            veuillez ne pas utiliser notre application.
+          </p>
+        </section>
 
-      <h2>1. Données collectées</h2>
-      <p>Aucune donnée personnelle identifiable n'est collectée par l'application. Aucune inscription, géolocalisation, photo, contact ou identifiant publicitaire n'est requis.</p>
+        <section>
+          <h2 class="text-2xl font-bold mb-4 text-white">2. Données que nous collectons</h2>
+          
+          <h3 class="text-xl font-semibold mb-3 text-[#c6a05a] mt-6">2.1. Données d'identification et de compte</h3>
+          <ul class="list-disc list-inside space-y-2 text-white/90 ml-4">
+            <li><strong>Nom d'utilisateur</strong> : Collecté lors de la création de compte pour personnaliser votre expérience</li>
+            <li><strong>Adresse e-mail</strong> : Requise pour la création de compte, la vérification d'identité et la récupération de compte</li>
+            <li><strong>Identifiant utilisateur unique</strong> : Généré automatiquement pour associer vos données à votre compte</li>
+          </ul>
 
-      <h2>2. Utilisation des informations</h2>
-      <p>Comme nous ne collectons pas de données personnelles, aucune analyse, profilage ou transmission à des tiers n'est effectuée.</p>
+          <h3 class="text-xl font-semibold mb-3 text-[#c6a05a] mt-6">2.2. Données de localisation</h3>
+          <p class="text-white/90 leading-relaxed">
+            Nous collectons votre <strong>localisation géographique</strong> (avec votre consentement explicite) uniquement pour :
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-white/90 ml-4 mt-2">
+            <li>Calculer les horaires de prière précis selon votre position géographique</li>
+            <li>Vous envoyer des rappels de prière personnalisés</li>
+          </ul>
+          <p class="text-white/90 leading-relaxed mt-4">
+            Vous pouvez désactiver l'accès à la localisation à tout moment dans les paramètres de votre appareil. 
+            Cette fonctionnalité est optionnelle et l'application reste utilisable sans localisation.
+          </p>
 
-      <h2>3. Autorisations techniques</h2>
-      <p>Des autorisations minimales peuvent être sollicitées (ex.&nbsp;: accès Internet pour charger du contenu, stockage pour fichiers audio). Elles ne servent pas à collecter des informations personnelles.</p>
+          <h3 class="text-xl font-semibold mb-3 text-[#c6a05a] mt-6">2.3. Photos et médias</h3>
+          <p class="text-white/90 leading-relaxed">
+            Nous pouvons demander l'accès à votre <strong>galerie photo</strong> ou appareil photo (avec votre consentement explicite) pour :
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-white/90 ml-4 mt-2">
+            <li>Permettre la personnalisation de votre profil utilisateur</li>
+            <li>Partager des captures d'écran de votre progression dans l'application</li>
+            <li>Utiliser des fonctionnalités spécifiques nécessitant l'accès aux médias</li>
+          </ul>
+          <p class="text-white/90 leading-relaxed mt-4">
+            Les photos sont stockées localement sur votre appareil et/ou sur nos serveurs sécurisés uniquement si vous choisissez de les synchroniser. 
+            Vous pouvez révoquer cet accès à tout moment dans les paramètres de votre appareil.
+          </p>
 
-      <h2>4. Liens externes</h2>
-      <p>L'app peut contenir des liens vers des sites tiers. Nous ne sommes pas responsables de leur contenu ni de leurs politiques de confidentialité.</p>
+          <h3 class="text-xl font-semibold mb-3 text-[#c6a05a] mt-6">2.4. Données de paiement</h3>
+          <p class="text-white/90 leading-relaxed">
+            Pour les achats in-app (déblocage du contenu premium), nous collectons et traitons les informations de paiement suivantes :
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-white/90 ml-4 mt-2">
+            <li>Informations de carte bancaire (Mastercard, Visa) : numéro de carte, date d'expiration, code CVV</li>
+            <li>Informations de facturation : nom, adresse e-mail</li>
+            <li>Informations de transaction : montant, date, statut</li>
+          </ul>
+          <p class="text-white/90 leading-relaxed mt-4">
+            <strong>Important</strong> : Nous ne stockons jamais vos informations de carte bancaire complètes sur nos serveurs. 
+            Toutes les transactions sont traitées de manière sécurisée via un processeur de paiement certifié conforme aux normes PCI-DSS (Payment Card Industry Data Security Standard) pour garantir la sécurité de vos données financières.
+          </p>
 
-      <h2>5. Contact</h2>
-      <p>Pour toute question&nbsp;: <a href="mailto:attaqwa2025@gmail.com">attaqwa2025@gmail.com</a></p>
+          <h3 class="text-xl font-semibold mb-3 text-[#c6a05a] mt-6">2.5. Données d'utilisation</h3>
+          <ul class="list-disc list-inside space-y-2 text-white/90 ml-4">
+            <li><strong>Progression dans l'application</strong> : chapitres lus, quiz complétés, scores obtenus</li>
+            <li><strong>Préférences</strong> : paramètres de notification, langue choisie, thème d'affichage</li>
+            <li><strong>Données techniques</strong> : version de l'application, système d'exploitation, identifiant de l'appareil (anonymisé)</li>
+          </ul>
 
-      <h2>6. Modifications</h2>
-      <p>Cette politique pourra être mise à jour si les fonctionnalités évoluent. Nous indiquerons la date de dernière mise à jour ci-dessus.</p>
+          <h3 class="text-xl font-semibold mb-3 text-[#c6a05a] mt-6">2.6. Données de support client</h3>
+          <p class="text-white/90 leading-relaxed">
+            Lorsque vous utilisez le formulaire de contact dans l'application ou sur notre site web, nous collectons :
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-white/90 ml-4 mt-2">
+            <li>Votre nom et adresse e-mail</li>
+            <li>Le contenu de votre message et le sujet de votre demande</li>
+            <li>Les informations techniques nécessaires pour résoudre votre problème</li>
+          </ul>
+        </section>
 
-      <footer>
-        <p>© <span id="year"></span> AT-Taqwa. Tous droits réservés.</p>
+        <section>
+          <h2 class="text-2xl font-bold mb-4 text-white">3. Comment nous utilisons vos données</h2>
+          <p class="text-white/90 leading-relaxed mb-4">Nous utilisons vos données pour :</p>
+          <ul class="list-disc list-inside space-y-2 text-white/90 ml-4">
+            <li><strong>Fournir et améliorer nos services</strong> : personnaliser votre expérience, synchroniser vos données entre appareils</li>
+            <li><strong>Gérer votre compte</strong> : authentification, récupération de mot de passe, gestion des abonnements premium</li>
+            <li><strong>Traiter les paiements</strong> : pour les achats in-app (Parties 2 et 3 du contenu) via un processeur de paiement sécurisé</li>
+            <li><strong>Calculer les horaires de prière</strong> : selon votre localisation géographique</li>
+            <li><strong>Envoyer des notifications</strong> : rappels de prière, mises à jour de l'application, communications importantes</li>
+            <li><strong>Assistance client</strong> : répondre à vos questions et résoudre les problèmes techniques</li>
+            <li><strong>Analyses et améliorations</strong> : comprendre comment l'application est utilisée pour l'améliorer</li>
+            <li><strong>Conformité légale</strong> : respecter les obligations légales et réglementaires</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4 text-white">4. Partage de données avec des tiers</h2>
+          
+          <h3 class="text-xl font-semibold mb-3 text-[#c6a05a] mt-6">4.1. Processeur de paiement</h3>
+          <p class="text-white/90 leading-relaxed">
+            Pour les transactions de paiement, nous partageons uniquement les informations strictement nécessaires avec notre processeur de paiement certifié. 
+            Ce prestataire traite vos informations de paiement de manière sécurisée et conforme aux normes PCI-DSS (Payment Card Industry Data Security Standard) 
+            pour garantir la protection de vos données financières.
+          </p>
+          <p class="text-white/90 leading-relaxed mt-4">
+            Nous sélectionnons nos partenaires de paiement sur la base de leur conformité aux standards de sécurité les plus stricts. 
+            Ces prestataires sont soumis à des audits réguliers et respectent les réglementations en vigueur en matière de protection des données financières.
+          </p>
+
+          <h3 class="text-xl font-semibold mb-3 text-[#c6a05a] mt-6">4.2. Services d'hébergement et d'infrastructure</h3>
+          <p class="text-white/90 leading-relaxed">
+            Nous utilisons des services d'hébergement cloud sécurisés pour stocker vos données. Ces prestataires sont soumis à des accords 
+            de confidentialité stricts et ne peuvent utiliser vos données qu'aux fins de fournir leurs services.
+          </p>
+
+          <h3 class="text-xl font-semibold mb-3 text-[#c6a05a] mt-6">4.3. Autres cas de partage</h3>
+          <p class="text-white/90 leading-relaxed">
+            Nous ne vendons jamais vos données personnelles à des tiers. Nous ne partageons vos données qu'aux fins suivantes :
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-white/90 ml-4 mt-2">
+            <li>Avec votre consentement explicite</li>
+            <li>Pour se conformer à une obligation légale ou une ordonnance judiciaire</li>
+            <li>Pour protéger nos droits, votre sécurité ou celle d'autrui</li>
+            <li>En cas de fusion, acquisition ou vente d'actifs (avec notification préalable)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4 text-white">5. Sécurité des données</h2>
+          <p class="text-white/90 leading-relaxed">
+            Nous mettons en œuvre des mesures de sécurité techniques et organisationnelles appropriées pour protéger vos données personnelles :
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-white/90 ml-4 mt-4">
+            <li><strong>Chiffrement</strong> : Transmission sécurisée via HTTPS/TLS pour toutes les communications</li>
+            <li><strong>Authentification</strong> : Vérification d'e-mail obligatoire pour sécuriser l'accès à votre compte</li>
+            <li><strong>Stockage sécurisé</strong> : Données stockées sur des serveurs sécurisés avec accès restreint</li>
+            <li><strong>Paiements sécurisés</strong> : Transactions traitées via un processeur de paiement certifié conforme PCI-DSS</li>
+            <li><strong>Surveillance</strong> : Surveillance continue des systèmes pour détecter les activités suspectes</li>
+          </ul>
+          <p class="text-white/90 leading-relaxed mt-4">
+            Malgré nos efforts, aucune méthode de transmission sur Internet ou de stockage électronique n'est totalement sécurisée. 
+            Nous ne pouvons garantir une sécurité absolue, mais nous nous engageons à protéger vos données dans la mesure du possible.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4 text-white">6. Vos droits</h2>
+          <p class="text-white/90 leading-relaxed mb-4">Conformément aux réglementations en vigueur (RGPD, lois sénégalaises), vous disposez des droits suivants :</p>
+          <ul class="list-disc list-inside space-y-2 text-white/90 ml-4">
+            <li><strong>Droit d'accès</strong> : Obtenir une copie de vos données personnelles que nous détenons</li>
+            <li><strong>Droit de rectification</strong> : Corriger vos données inexactes ou incomplètes</li>
+            <li><strong>Droit à l'effacement</strong> : Demander la suppression de vos données dans certains cas</li>
+            <li><strong>Droit à la portabilité</strong> : Recevoir vos données dans un format structuré et couramment utilisé</li>
+            <li><strong>Droit d'opposition</strong> : Vous opposer au traitement de vos données pour certaines finalités</li>
+            <li><strong>Droit de retirer votre consentement</strong> : À tout moment pour les données collectées sur la base du consentement</li>
+            <li><strong>Droit de limitation</strong> : Limiter le traitement de vos données dans certains cas</li>
+          </ul>
+          <p class="text-white/90 leading-relaxed mt-4">
+            Pour exercer ces droits, contactez-nous à <a href="mailto:attaqwa241@gmail.com" class="text-[#c6a05a] hover:underline">attaqwa241@gmail.com</a> 
+            ou via le formulaire de contact dans l'application. Nous répondrons dans un délai raisonnable (généralement sous 30 jours).
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4 text-white">7. Conservation des données</h2>
+          <p class="text-white/90 leading-relaxed">
+            Nous conservons vos données personnelles aussi longtemps que nécessaire pour fournir nos services et respecter nos obligations légales :
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-white/90 ml-4 mt-4">
+            <li><strong>Données de compte</strong> : Conservées tant que votre compte est actif, puis pendant 3 ans après la dernière activité</li>
+            <li><strong>Données de paiement</strong> : Conservées conformément aux obligations légales (généralement 7 ans pour les transactions financières)</li>
+            <li><strong>Données de support</strong> : Conservées pendant 2 ans après la résolution de votre demande</li>
+            <li><strong>Données de localisation</strong> : Conservées uniquement pendant la session active, non stockées de manière permanente</li>
+          </ul>
+          <p class="text-white/90 leading-relaxed mt-4">
+            Vous pouvez demander la suppression de votre compte et de vos données à tout moment via les paramètres de l'application ou en nous contactant.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4 text-white">8. Cookies et technologies similaires</h2>
+          <p class="text-white/90 leading-relaxed">
+            L'application mobile AT-Taqwa peut utiliser des technologies similaires aux cookies (tokens, identifiants de session) pour :
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-white/90 ml-4 mt-2">
+            <li>Maintenir votre session de connexion</li>
+            <li>Mémoriser vos préférences</li>
+            <li>Améliorer les performances de l'application</li>
+          </ul>
+          <p class="text-white/90 leading-relaxed mt-4">
+            Ces données sont stockées localement sur votre appareil et peuvent être supprimées via les paramètres de votre appareil.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4 text-white">9. Transferts internationaux</h2>
+          <p class="text-white/90 leading-relaxed">
+            Vos données peuvent être stockées et traitées dans des pays autres que le vôtre. Nous nous assurons que des mesures de protection 
+            appropriées sont en place pour garantir que vos données bénéficient d'un niveau de protection adéquat, conformément aux réglementations applicables.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4 text-white">10. Modifications de cette politique</h2>
+          <p class="text-white/90 leading-relaxed">
+            Nous pouvons mettre à jour cette politique de confidentialité occasionnellement pour refléter les changements dans nos pratiques 
+            ou pour d'autres raisons opérationnelles, légales ou réglementaires. Nous vous informerons de tout changement significatif par :
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-white/90 ml-4 mt-2">
+            <li>Une notification dans l'application</li>
+            <li>Un e-mail à l'adresse associée à votre compte</li>
+            <li>Une mise à jour de la date "Dernière mise à jour" en haut de cette page</li>
+          </ul>
+          <p class="text-white/90 leading-relaxed mt-4">
+            Nous vous encourageons à consulter régulièrement cette page pour rester informé de nos pratiques de confidentialité.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4 text-white">11. Politique de remboursement et d'annulation</h2>
+          <p class="text-white/90 leading-relaxed mb-4">
+            Pour les achats in-app (déblocage des Parties 2 et 3 du contenu premium), la politique suivante s'applique :
+          </p>
+          
+          <h3 class="text-xl font-semibold mb-3 text-[#c6a05a] mt-6">11.1. Droit de rétractation</h3>
+          <p class="text-white/90 leading-relaxed">
+            Conformément à la législation en vigueur, vous disposez d'un <strong>délai de 14 jours</strong> à compter de la date d'achat pour demander un remboursement, 
+            à condition que le contenu premium n'ait pas été entièrement consulté ou téléchargé.
+          </p>
+
+          <h3 class="text-xl font-semibold mb-3 text-[#c6a05a] mt-6">11.2. Conditions de remboursement</h3>
+          <p class="text-white/90 leading-relaxed mb-2">Les remboursements sont accordés dans les cas suivants :</p>
+          <ul class="list-disc list-inside space-y-2 text-white/90 ml-4 mt-2">
+            <li>Demande formulée dans les 14 jours suivant l'achat</li>
+            <li>Problème technique empêchant l'accès au contenu premium</li>
+            <li>Achat accidentel ou erreur de transaction</li>
+            <li>Non-conformité du contenu avec la description fournie</li>
+          </ul>
+          <p class="text-white/90 leading-relaxed mt-4">
+            <strong>Note importante :</strong> Si vous avez déjà consulté plus de 50% du contenu premium acheté, le remboursement peut être refusé ou partiel.
+          </p>
+
+          <h3 class="text-xl font-semibold mb-3 text-[#c6a05a] mt-6">11.3. Processus de remboursement</h3>
+          <p class="text-white/90 leading-relaxed mb-2">Pour demander un remboursement :</p>
+          <ol class="list-decimal list-inside space-y-2 text-white/90 ml-4 mt-2">
+            <li>Contactez-nous à <a href="mailto:attaqwa241@gmail.com" class="text-[#c6a05a] hover:underline">attaqwa241@gmail.com</a> ou via le formulaire de contact dans l'application</li>
+            <li>Indiquez votre identifiant utilisateur et le numéro de transaction</li>
+            <li>Précisez la raison de votre demande de remboursement</li>
+            <li>Nous traiterons votre demande sous <strong>7 à 14 jours ouvrables</strong></li>
+          </ol>
+          <p class="text-white/90 leading-relaxed mt-4">
+            Le remboursement sera effectué sur le même moyen de paiement utilisé lors de l'achat (carte Mastercard ou Visa). 
+            Le délai d'encaissement peut varier selon votre banque (généralement 5 à 10 jours ouvrables).
+          </p>
+
+          <h3 class="text-xl font-semibold mb-3 text-[#c6a05a] mt-6">11.4. Annulation d'abonnement</h3>
+          <p class="text-white/90 leading-relaxed">
+            Si vous avez souscrit à un abonnement premium récurrent, vous pouvez l'annuler à tout moment via les paramètres de votre compte dans l'application. 
+            L'annulation prendra effet à la fin de la période de facturation en cours. Aucun remboursement ne sera effectué pour la période déjà payée.
+          </p>
+
+          <h3 class="text-xl font-semibold mb-3 text-[#c6a05a] mt-6">11.5. Cas de refus de remboursement</h3>
+          <p class="text-white/90 leading-relaxed mb-2">Un remboursement peut être refusé dans les cas suivants :</p>
+          <ul class="list-disc list-inside space-y-2 text-white/90 ml-4 mt-2">
+            <li>Demande formulée après le délai de 14 jours</li>
+            <li>Contenu premium déjà entièrement consulté ou téléchargé</li>
+            <li>Utilisation frauduleuse ou violation des conditions d'utilisation</li>
+            <li>Demande non justifiée ou abusive</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4 text-white">12. Contact</h2>
+          <p class="text-white/90 leading-relaxed">
+            Pour toute question concernant cette politique de confidentialité, la politique de remboursement ou pour exercer vos droits, contactez-nous :
+          </p>
+          <div class="bg-white/5 rounded-xl p-6 mt-4 border border-white/10">
+            <p class="text-white/90 mb-2"><strong class="text-[#c6a05a]">Email :</strong> <a href="mailto:attaqwa241@gmail.com" class="text-[#c6a05a] hover:underline">attaqwa241@gmail.com</a></p>
+            <p class="text-white/90"><strong class="text-[#c6a05a]">Formulaire de contact :</strong> <a href="contact.html" class="text-[#c6a05a] hover:underline">Page de contact</a></p>
+          </div>
+        </section>
+      </div>
+
+      <footer class="mt-12 pt-8 border-t border-white/10">
+        <p class="text-white/60 text-sm">© <span id="year"></span> AT-Taqwa. Tous droits réservés.</p>
+        <div class="mt-4 flex flex-wrap gap-4">
+          <a href="index.html" class="text-white/60 hover:text-white text-sm transition">Accueil</a>
+          <a href="contact.html" class="text-white/60 hover:text-white text-sm transition">Contact</a>
+        </div>
       </footer>
     </div>
   </main>
 
   <script>
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Set update date
+    const updateDate = new Date().toLocaleDateString('fr-FR', { 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    });
+    document.getElementById('updateDate').textContent = updateDate;
+
+    // Mobile Menu Toggle
     (function() {
-      var yearEl = document.getElementById('year');
-      if (yearEl) {
-        yearEl.textContent = new Date().getFullYear();
+      const menuButton = document.getElementById('mobileMenuButton');
+      const mobileMenu = document.getElementById('mobileMenu');
+      
+      if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+          const icon = menuButton.querySelector('svg');
+          if (mobileMenu.classList.contains('hidden')) {
+            icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>';
+          } else {
+            icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>';
+          }
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', function() {
+            mobileMenu.classList.add('hidden');
+            const icon = menuButton.querySelector('svg');
+            icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>';
+          });
+        });
       }
     })();
   </script>
 </body>
 </html>
-
