@@ -138,21 +138,6 @@
     .animate-scroll:hover {
       animation-play-state: paused;
     }
-    /* WhatsApp Floating Button Animations */
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
-    }
-    @keyframes pulse-ring {
-      0% { transform: scale(1); opacity: 1; }
-      100% { transform: scale(1.5); opacity: 0; }
-    }
-    .whatsapp-float {
-      animation: float 3s ease-in-out infinite;
-    }
-    .whatsapp-pulse {
-      animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-    }
   </style>
 </head>
 <body class="min-h-screen bg-[#0f4f49] text-white selection:bg-[#c6a05a]/30 selection:text-white">
@@ -168,10 +153,9 @@
           <a href="#book" class="hover:text-white transition">Le livre</a>
           <a href="#app" class="hover:text-white transition">App mobile</a>
           <a href="#features" class="hover:text-white transition">Fonctionnalités</a>
-          <a href="#faq" class="hover:text-white transition">FAQ</a>
         </nav>
         <div class="flex items-center gap-2">
-          <a href="#buy" class="inline-flex items-center rounded-xl bg-[#c6a05a] px-4 py-2 text-[#0f4f49] font-semibold shadow hover:brightness-95 transition">Acheter</a>
+          <a href="#app" class="inline-flex items-center rounded-xl bg-[#c6a05a] px-4 py-2 text-[#0f4f49] font-semibold shadow hover:brightness-95 transition">Télécharger l'app</a>
           <!-- Mobile Menu Button -->
           <button id="mobileMenuButton" class="md:hidden p-2 rounded-lg hover:bg-white/10 transition" aria-label="Menu">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -186,7 +170,6 @@
           <a href="#book" class="block py-2 text-white/80 hover:text-white transition">Le livre</a>
           <a href="#app" class="block py-2 text-white/80 hover:text-white transition">App mobile</a>
           <a href="#features" class="block py-2 text-white/80 hover:text-white transition">Fonctionnalités</a>
-          <a href="#faq" class="block py-2 text-white/80 hover:text-white transition">FAQ</a>
           <a href="contact.html" class="block py-2 text-[#c6a05a] font-semibold hover:text-[#c6a05a]/80 transition">Contact</a>
         </nav>
       </div>
@@ -202,11 +185,21 @@
           Votre guide complet pour <span class="text-[#c6a05a]">la réparation de la prière</span>
         </h1>
         <p class="max-w-xl text-white/80">
-          AT‑Taqwa est un livre et une application mobile qui vous accompagne dans l'apprentissage et la réparation de la prière. Découvrez 12 chapitres structurés en 3 parties, avec des explications claires, des preuves textuelles et un suivi de votre progression.
+          AT‑Taqwa est une application mobile qui vous accompagne dans l'apprentissage et la réparation de la prière. Découvrez 12 chapitres structurés en 3 parties, avec des explications claires, des preuves textuelles et un suivi de votre progression.
         </p>
         <div class="flex flex-wrap gap-3">
-          <a href="#buy" class="rounded-2xl bg-[#c6a05a] px-5 py-3 font-semibold text-[#0f4f49] shadow hover:brightness-95 transition">Acheter le livre</a>
-          <a href="#preview" class="rounded-2xl border border-white/20 px-5 py-3 font-semibold hover:bg-white/10 transition">Lire un extrait (PDF)</a>
+          <a href="https://play.google.com/store/apps/details?id=com.attaqwaAly.app&pli=1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-2xl bg-[#c6a05a] px-5 py-3 font-semibold text-[#0f4f49] shadow hover:brightness-95 transition">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M3,20.5V3.5C3,2.91,3.09,1.5,4,1.5H20C20.91,1.5,21,2.91,21,3.5V20.5C21,21.41,20.91,22.5,20,22.5H4C3.09,22.5,3,21.41,3,20.5M16.75,18.86L12,16.08L7.25,18.86V5.14H16.75V18.86M7.25,4.04L12,6.82L16.75,4.04H7.25Z"/>
+            </svg>
+            Google Play
+          </a>
+          <a href="https://apps.apple.com/sn/app/at-taqwa/id6748707044?l=fr-FR" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-2xl bg-black px-5 py-3 font-semibold text-white shadow hover:bg-gray-900 transition">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-1.02.65.03 2.47.26 3.64 1.98-3.09 1.73-2.59 5.98.54 7.31-.7 1.95-1.47 3.85-2.5 5.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            App Store
+          </a>
         </div>
         <div class="flex items-center gap-6 pt-3 text-xs text-white/70">
           <div class="flex items-center gap-2"><span class="inline-block h-2 w-2 rounded-full bg-[#c6a05a]"></span>Contenu validé par des enseignants</div>
@@ -222,16 +215,16 @@
           <div class="w-full rounded-3xl overflow-hidden shadow-lg ring-1 ring-white/10">
             <img src="assets/images/dome-mosquee.png" alt="Dôme de mosquée" class="w-full h-auto object-cover" />
           </div>
-          <!-- Book card -->
+          <!-- App card -->
           <div class="w-full rounded-3xl bg-white/5 p-4 shadow-lg ring-1 ring-white/10">
             <div class="flex items-center gap-4">
-              <img src="assets/images/logo.png" alt="Livre AT-Taqwa" class="aspect-[3/4] w-24 shrink-0 rounded-xl object-cover border border-white/10" />
+              <img src="assets/images/logo.png" alt="App AT-Taqwa" class="aspect-[3/4] w-24 shrink-0 rounded-xl object-cover border border-white/10" />
               <div>
-                <h3 class="text-lg font-semibold">AT‑TAQWA — Le Livre</h3>
-                <p class="text-sm text-white/75">Édition reliée & numérique (PDF)</p>
-                <div class="mt-3 flex gap-3">
-                  <a href="#buy" class="rounded-xl bg-[#c6a05a] px-3 py-2 text-sm font-semibold text-[#0f4f49] hover:brightness-95 transition">Acheter</a>
-                  <a href="#preview" class="rounded-xl border border-white/20 px-3 py-2 text-sm hover:bg-white/10 transition">Extrait</a>
+                <h3 class="text-lg font-semibold">AT‑TAQWA — Application Mobile</h3>
+                <p class="text-sm text-white/75">Disponible sur iOS et Android</p>
+                <div class="mt-3 flex gap-2">
+                  <a href="https://play.google.com/store/apps/details?id=com.attaqwaAly.app&pli=1" target="_blank" rel="noopener noreferrer" class="rounded-xl bg-[#c6a05a] px-3 py-2 text-xs font-semibold text-[#0f4f49] hover:brightness-95 transition">Play Store</a>
+                  <a href="https://apps.apple.com/sn/app/at-taqwa/id6748707044?l=fr-FR" target="_blank" rel="noopener noreferrer" class="rounded-xl bg-black px-3 py-2 text-xs font-semibold text-white hover:bg-gray-900 transition">App Store</a>
                 </div>
               </div>
             </div>
@@ -245,26 +238,15 @@
     </div>
   </section>
 
-  <!-- TRUST / BADGES -->
-  <section class="border-y border-white/10 bg-[#0f4f49]/60">
-    <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-2 gap-6 sm:grid-cols-4">
-        <div class="rounded-2xl border border-white/10 p-4 text-center text-sm text-white/80">Rappels intelligents</div>
-        <div class="rounded-2xl border border-white/10 p-4 text-center text-sm text-white/80">Suivi des rattrapages</div>
-        <div class="rounded-2xl border border-white/10 p-4 text-center text-sm text-white/80">Conseils authentiques</div>
-        <div class="rounded-2xl border border-white/10 p-4 text-center text-sm text-white/80">Mode hors‑ligne</div>
-      </div>
-    </div>
-  </section>
 
   <!-- BOOK SECTION -->
   <section id="book" class="relative">
     <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
       <div class="grid items-center gap-12 md:grid-cols-2">
         <div class="order-2 md:order-1">
-          <h2 class="text-3xl font-bold sm:text-4xl">Le livre AT‑Taqwa</h2>
+          <h2 class="text-3xl font-bold sm:text-4xl">Le contenu AT‑Taqwa</h2>
           <p class="mt-4 text-white/80">
-            Un ouvrage complet structuré en <strong class="text-white">3 parties</strong> et <strong class="text-white">12 chapitres</strong>, rédigé par <strong class="text-[#c6a05a]">Aly Anta Sow</strong>. Une pédagogie claire avec des preuves textuelles du Coran et de la Sunna pour comprendre et réparer correctement vos prières.
+            Un contenu complet structuré en <strong class="text-white">3 parties</strong> et <strong class="text-white">12 chapitres</strong>, rédigé par <strong class="text-[#c6a05a]">Aly Anta Sow</strong>. Une pédagogie claire avec des preuves textuelles du Coran et de la Sunna pour comprendre et réparer correctement vos prières. Disponible dans l'application mobile.
           </p>
           
           <!-- Structure du livre avec animation de révélation -->
@@ -352,11 +334,20 @@
             <li class="flex items-start gap-3"><span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#c6a05a]"></span> <strong>12 chapitres</strong> avec explications détaillées et preuves textuelles</li>
             <li class="flex items-start gap-3"><span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#c6a05a]"></span> <strong>3 parties</strong> progressives : de la base à l'avancé</li>
             <li class="flex items-start gap-3"><span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#c6a05a]"></span> <strong>Quiz interactifs</strong> pour tester vos connaissances</li>
-            <li class="flex items-start gap-3"><span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#c6a05a]"></span> <strong>QR codes</strong> vers des explications audio</li>
           </ul>
           <div class="mt-8 flex flex-wrap gap-3">
-            <a href="#buy" class="rounded-2xl bg-[#c6a05a] px-5 py-3 font-semibold text-[#0f4f49] hover:brightness-95 transition">Commander maintenant</a>
-            <a href="#preview" class="rounded-2xl border border-white/20 px-5 py-3 font-semibold hover:bg-white/10 transition">Télécharger l'aperçu</a>
+            <a href="https://play.google.com/store/apps/details?id=com.attaqwaAly.app&pli=1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-2xl bg-[#c6a05a] px-5 py-3 font-semibold text-[#0f4f49] hover:brightness-95 transition">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M3,20.5V3.5C3,2.91,3.09,1.5,4,1.5H20C20.91,1.5,21,2.91,21,3.5V20.5C21,21.41,20.91,22.5,20,22.5H4C3.09,22.5,3,21.41,3,20.5M16.75,18.86L12,16.08L7.25,18.86V5.14H16.75V18.86M7.25,4.04L12,6.82L16.75,4.04H7.25Z"/>
+              </svg>
+              Télécharger sur Google Play
+            </a>
+            <a href="https://apps.apple.com/sn/app/at-taqwa/id6748707044?l=fr-FR" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-2xl bg-black px-5 py-3 font-semibold text-white hover:bg-gray-900 transition">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-1.02.65.03 2.47.26 3.64 1.98-3.09 1.73-2.59 5.98.54 7.31-.7 1.95-1.47 3.85-2.5 5.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+              </svg>
+              Télécharger sur App Store
+            </a>
           </div>
         </div>
         <div class="order-1 md:order-2">
@@ -586,22 +577,8 @@
             <li class="flex items-start gap-3">
               <span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#c6a05a]"></span>
               <div>
-                <strong class="text-white">Mode hors-ligne</strong>
-                <p class="text-sm text-white/70">Accédez au contenu sans connexion internet</p>
-              </div>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#c6a05a]"></span>
-              <div>
                 <strong class="text-white">Suivi de progression</strong>
                 <p class="text-sm text-white/70">Visualisez votre avancement par chapitre</p>
-              </div>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="mt-1 inline-block h-2 w-2 rounded-full bg-[#c6a05a]"></span>
-              <div>
-                <strong class="text-white">Notifications intelligentes</strong>
-                <p class="text-sm text-white/70">Rappels personnalisés pour vos prières</p>
               </div>
             </li>
             <li class="flex items-start gap-3">
@@ -617,7 +594,7 @@
 
       <!-- App Store Buttons -->
       <div class="mt-12 flex flex-wrap justify-center gap-4">
-        <a href="#store" class="inline-flex items-center gap-3 rounded-2xl bg-black px-6 py-4 font-semibold text-white hover:bg-gray-900 transition shadow-lg">
+        <a href="https://apps.apple.com/sn/app/at-taqwa/id6748707044?l=fr-FR" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 rounded-2xl bg-black px-6 py-4 font-semibold text-white hover:bg-gray-900 transition shadow-lg">
           <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
             <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-1.02.65.03 2.47.26 3.64 1.98-3.09 1.73-2.59 5.98.54 7.31-.7 1.95-1.47 3.85-2.5 5.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
           </svg>
@@ -626,7 +603,7 @@
             <div class="text-lg">App Store</div>
           </div>
         </a>
-        <a href="#store" class="inline-flex items-center gap-3 rounded-2xl bg-[#c6a05a] px-6 py-4 font-semibold text-[#0f4f49] hover:brightness-95 transition shadow-lg">
+        <a href="https://play.google.com/store/apps/details?id=com.attaqwaAly.app&pli=1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 rounded-2xl bg-[#c6a05a] px-6 py-4 font-semibold text-[#0f4f49] hover:brightness-95 transition shadow-lg">
           <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
             <path d="M3,20.5V3.5C3,2.91,3.09,1.5,4,1.5H20C20.91,1.5,21,2.91,21,3.5V20.5C21,21.41,20.91,22.5,20,22.5H4C3.09,22.5,3,21.41,3,20.5M16.75,18.86L12,16.08L7.25,18.86V5.14H16.75V18.86M7.25,4.04L12,6.82L16.75,4.04H7.25Z"/>
           </svg>
@@ -661,11 +638,6 @@
           <p class="mt-2 text-sm text-white/75">Explications accessibles pour débutants et avancés, avec exemples concrets de réparation.</p>
         </div>
         <div class="rounded-2xl border border-white/10 bg-white/5 p-6 shadow ring-1 ring-white/10 hover:bg-white/10 transition">
-          <div class="mb-3 text-3xl">🔊</div>
-          <h3 class="text-lg font-semibold">QR codes audio</h3>
-          <p class="mt-2 text-sm text-white/75">Accédez à des explications audio directement depuis le livre via QR codes.</p>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-6 shadow ring-1 ring-white/10 hover:bg-white/10 transition">
           <div class="mb-3 text-3xl">✅</div>
           <h3 class="text-lg font-semibold">Cas pratiques</h3>
           <p class="mt-2 text-sm text-white/75">Exemples concrets pour chaque type d'erreur et sa réparation selon les règles islamiques.</p>
@@ -693,7 +665,6 @@
           </p>
           <div class="mt-6 flex flex-wrap gap-3">
             <a href="contact.html" class="rounded-2xl border border-white/20 px-5 py-3 font-semibold hover:bg-white/10 transition">Contact</a>
-            <a href="#press" class="rounded-2xl bg-[#c6a05a] px-5 py-3 font-semibold text-[#0f4f49] hover:brightness-95 transition">Dossier de presse (PDF)</a>
           </div>
         </div>
         <div class="mx-auto w-40 aspect-[3/4] rounded-2xl border border-white/10 bg-white/10 overflow-hidden">
@@ -703,50 +674,28 @@
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section id="faq">
-    <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold sm:text-4xl">Questions fréquentes origin</h2>
-      <div class="mt-8 divide-y divide-white/10 rounded-2xl border border-white/10 bg-white/5">
-        <details class="group open:bg-white/5">
-          <summary class="cursor-pointer list-none p-6 font-medium flex items-center justify-between">
-            <span>Le livre existe‑t‑il en version papier et numérique ?</span>
-            <span class="text-white/50 transition-transform">⌄</span>
-          </summary>
-          <div class="px-6 pb-6 text-white/80">Oui, le livre est disponible en version papier (reliée) et en version numérique (PDF et ePub). Les versions numériques sont incluses avec l'achat de la version papier ou peuvent être achetées séparément.</div>
-        </details>
-        <details class="group open:bg-white/5">
-          <summary class="cursor-pointer list-none p-6 font-medium flex items-center justify-between">
-            <span>Puis‑je utiliser l'app sans créer de compte ?</span>
-            <span class="text-white/50 transition-transform">⌄</span>
-          </summary>
-          <div class="px-6 pb-6 text-white/80">Un mode hors‑ligne est prévu. La création de compte permet de sauvegarder vos données et d'activer les rappels.</div>
-        </details>
-        <details class="group open:bg-white/5">
-          <summary class="cursor-pointer list-none p-6 font-medium flex items-center justify-between">
-            <span>Comment acheter depuis l'étranger ?</span>
-            <span class="text-white/50 transition-transform">⌄</span>
-          </summary>
-          <div class="px-6 pb-6 text-white/80">
-            <p class="mb-2">Paiements en ligne (carte, PayDunya/SoftPay) et livraison internationale disponible. Le livre contient 12 chapitres répartis en 3 parties progressives.</p>
-            <p class="mt-3"><strong class="text-[#c6a05a]">Application mobile :</strong> Les utilisateurs internationaux peuvent télécharger l'application AT-Taqwa directement sur le Google Play Store pour accéder au contenu numérique.</p>
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
 
   <!-- CTA FOOTER -->
   <section class="relative overflow-hidden">
     <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(198,160,90,0.18),transparent_55%)]"></div>
     <div class="mx-auto max-w-5xl px-4 py-16 text-center sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-extrabold sm:text-4xl">Faites le premier pas dès aujourd'hui</h2>
+      <h2 class="text-3xl font-extrabold sm:text-4xl">Téléchargez l'application dès aujourd'hui</h2>
       <p class="mx-auto mt-4 max-w-2xl text-white/80">
-        Commandez le livre AT‑Taqwa et activez votre suivi personnalisé dans l'app.
+        Découvrez AT‑Taqwa sur votre smartphone et commencez votre apprentissage de la réparation de la prière.
       </p>
       <div class="mt-8 flex flex-wrap justify-center gap-3">
-        <a href="#buy" class="rounded-2xl bg-[#c6a05a] px-6 py-3 font-semibold text-[#0f4f49] shadow hover:brightness-95 transition">Acheter maintenant</a>
-        <a href="#preview" class="rounded-2xl border border-white/20 px-6 py-3 font-semibold hover:bg-white/10 transition">Télécharger l'extrait</a>
+        <a href="https://play.google.com/store/apps/details?id=com.attaqwaAly.app&pli=1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-2xl bg-[#c6a05a] px-6 py-3 font-semibold text-[#0f4f49] shadow hover:brightness-95 transition">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M3,20.5V3.5C3,2.91,3.09,1.5,4,1.5H20C20.91,1.5,21,2.91,21,3.5V20.5C21,21.41,20.91,22.5,20,22.5H4C3.09,22.5,3,21.41,3,20.5M16.75,18.86L12,16.08L7.25,18.86V5.14H16.75V18.86M7.25,4.04L12,6.82L16.75,4.04H7.25Z"/>
+          </svg>
+          Télécharger sur Google Play
+        </a>
+        <a href="https://apps.apple.com/sn/app/at-taqwa/id6748707044?l=fr-FR" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-2xl bg-black px-6 py-3 font-semibold text-white shadow hover:bg-gray-900 transition">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-1.02.65.03 2.47.26 3.64 1.98-3.09 1.73-2.59 5.98.54 7.31-.7 1.95-1.47 3.85-2.5 5.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+          </svg>
+          Télécharger sur App Store
+        </a>
       </div>
     </div>
   </section>
@@ -773,7 +722,7 @@
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
           var href = this.getAttribute('href');
-          if (href !== '#' && href !== '#buy' && href !== '#preview' && href !== '#store' && href !== '#contact' && href !== '#press' && href !== '#terms') {
+          if (href !== '#' && href !== '#contact' && !href.startsWith('http')) {
             e.preventDefault();
             var target = document.querySelector(href);
             if (target) {
@@ -816,27 +765,6 @@
     })();
   </script>
 
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/221785204078?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20AT-Taqwa" 
-     target="_blank" 
-     rel="noopener noreferrer"
-     class="fixed bottom-20 right-6 z-50 whatsapp-float group">
-    <div class="relative">
-      <div class="absolute inset-0 bg-[#25D366] rounded-full whatsapp-pulse opacity-75"></div>
-      <div class="relative w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
-        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.007-.004a9.876 9.876 0 01-3.237-3.238l-.004-.007a9.87 9.87 0 01-1.378-5.031c0-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c0 5.45-4.436 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .96 4.534.96 10.09c0 1.984.488 3.856 1.35 5.5L.06 23.876l8.29-2.25a11.76 11.76 0 003.7.59h.01c5.554 0 10.09-4.535 10.09-10.09 0-2.735-1.08-5.3-3.037-7.245"/>
-        </svg>
-        <!-- Badge avec le chiffre 1 -->
-        <div class="absolute -top-1 -right-1 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center shadow-lg border-2 border-white">
-          <span class="text-white text-xs font-bold">1</span>
-        </div>
-      </div>
-      <div class="absolute right-full mr-3 top-1/2 transform -translate-y-1/2 bg-white text-[#0f4f49] px-4 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm font-semibold">
-        Contactez-nous sur WhatsApp
-      </div>
-    </div>
-  </a>
   <script>
     // Gestion du retour d'e-mail Firebase: ?mode=verifyEmail&...
     (function () {
